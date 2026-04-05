@@ -1,0 +1,55 @@
+CANONICAL HASHES
+Possibilistic Security Whitepaper
+Aaron Green, April 2026
+
+================================================================
+
+Canonical URL:  https://github.com/IridiumSoftware/possibilistic-security
+Released:       2026-04-05
+Release tag:    v1.0
+Author:         Aaron Green
+
+================================================================
+SHA-256 HASHES
+================================================================
+
+possibilistic_security_whitepaper.txt
+c8eb727147bafa319a0e729e9350e19b70b890ea5b9907ff50d4476c1d8d9bfc
+
+possibilistic_security_whitepaper.pdf
+2fb6825b8c5f8d4eae6eb56c1dca781eafea8dfba12beed027f577a4a803f75d
+
+================================================================
+VERIFICATION
+================================================================
+
+To verify a copy you hold matches the canonical version:
+
+    sha256sum possibilistic_security_whitepaper.txt
+    sha256sum possibilistic_security_whitepaper.pdf
+
+Compare the output against the hashes above. A non-matching
+hash means the copy has been altered and is non-canonical.
+
+On macOS:  shasum -a 256 <filename>
+On Linux:  sha256sum <filename>
+On Windows: CertUtil -hashfile <filename> SHA256
+
+================================================================
+PUBLICATION CHANNELS
+================================================================
+
+This hash file should be published at the canonical URL
+alongside the whitepaper. Additionally, the hashes above
+should be publicly posted to at least one independent channel
+(e.g., social media, author's public website, pinned post)
+at the time of release, so any third party can verify the
+canonical value without trusting only the canonical URL.
+
+================================================================
+LICENSE
+================================================================
+
+The whitepaper is released under the Triadic Closure License
+(TCL). See the whitepaper's LICENSE AND DEDICATION section for
+full terms. This hash file is also released under TCL.
