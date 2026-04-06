@@ -14,10 +14,10 @@ SHA-256 HASHES
 ================================================================
 
 possibilistic_security_whitepaper.txt
-d6859b2619192cbb982d608135ec7c3ed54257e8464c7100641933bf854ef961
+bd8926707e154d02b8afdeb3352ec2ed7e76ad19811aa38164228693a1309b30
 
 possibilistic_security_whitepaper.pdf
-4f9bcde6afac160fd68978127b1a87583c4fce3266c097421e572d6949dd3a50
+d9df8781d9aeb769d001c7ea4b8cd5db11178d23feab3ed4896f44b2b19d6934
 
 ================================================================
 VERIFICATION

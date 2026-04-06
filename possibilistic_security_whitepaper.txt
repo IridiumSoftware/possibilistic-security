@@ -34,6 +34,14 @@ commons. It cannot be revoked by any single party, including its
 authors, because no single party holds it. It can only be extended by
 triads that close.
 
+The TCL is not merely a license on the work. It is the first
+instantiation of the framework at the organizational scale (§8.4):
+an open organizational substrate on which triads can form without
+requiring permission, incorporation, or contract. Membership is
+defined by closure-capability, not by credential. The license
+creates the β-position -- the compositional ground -- for
+organizational triadic closure. This is step one.
+
 UNTESTED METHODOLOGY. This paper proposes an untested security
 architecture. It is a research proposal, conditional on the Closure
 framework (Green 2026) being correct at its structural level.
