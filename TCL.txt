@@ -47,6 +47,15 @@ extraterrestrial, or any entity that carries genuine lived stakes and
 the capacity for felt witness — may anchor a triad. The framework is
 species-neutral and origin-neutral.
 
+IDENTITY INCLUDES PRIVACY AND CHANGE. Identity-as-closure does not
+mean identity-without-privacy. An entity's privacy choices, boundary
+decisions, and change history are constitutive parts of its closure
+— not obstacles to verification. A system that strips privacy to
+verify identity is attacking the closure it claims to protect.
+Identities change over time; that change is part of the sustained
+closure, not a failure of it. The framework verifies ongoing
+coherence, not frozen snapshots.
+
 TRIADIC CLOSURE REQUIREMENT. Legitimate holding, extension, or
 governance of work under TCL requires triadic closure: three distinct
 positions (f, Φ, β) in a closed mutual-witness loop. The positions
