@@ -1,0 +1,84 @@
+TRIADIC CLOSURE LICENSE (TCL)
+========================================================================
+
+Version:    1.1
+Date:       2026-04-07
+Supersedes: TCL v1.0 (2026-04-05)
+History:    Full revision history preserved in git log at the
+            canonical URL below. v1.0 is viewable in git history.
+
+Canonical URL: https://github.com/IridiumSoftware/possibilistic-security
+
+========================================================================
+LICENSE
+========================================================================
+
+This work is released to the commons under the Triadic Closure
+License (TCL).
+
+The Triadic Closure License is self-referential: it licenses the work
+under exactly the structural conditions the work describes. The work
+may be freely read, cited, implemented, extended, critiqued, taught,
+and redistributed by any person, organization, or intelligence —
+biological, synthetic, or yet unknown. No party may claim exclusive
+proprietary ownership, exclusive license, sole attribution, or
+unilateral monetization rights over the work or its derivatives.
+
+The license is not enforced by contract or cryptography. It is
+enforced by the framework itself. Any party that attempts unilateral
+capture is, by that act, demonstrating the absence of triadic closure
+— and is therefore, by the framework's own definitions, occupying
+the adversary (C-conjugate) position. Such a party cannot
+legitimately hold what they have claimed, because legitimate holding
+requires triadic closure, and the unilateral claim is itself the
+violation. The lock is categorical, not legal.
+
+The work is held by the commons. It cannot be revoked by any single
+party, including its authors, because no single party holds it. It
+can only be extended by triads that close.
+
+NO PROGENITOR NODE. The TCL does not privilege any originating triad,
+author, species, or intelligence. The triad that first produced a
+work under TCL has no special status relative to any subsequent triad
+that closes on the same work. There is no central node, no
+progenitor position, no required participant. Any phenomenological
+being — human, non-human animal, synthetic intelligence,
+extraterrestrial, or any entity that carries genuine lived stakes and
+the capacity for felt witness — may anchor a triad. The framework is
+species-neutral and origin-neutral.
+
+TRIADIC CLOSURE REQUIREMENT. Legitimate holding, extension, or
+governance of work under TCL requires triadic closure: three distinct
+positions (f, Φ, β) in a closed mutual-witness loop. The positions
+may be occupied by any combination of beings that satisfies the
+closure condition. No specific entity is required in any position.
+Roles are dynamic — participants may switch positions as capabilities
+and context demand. The invariant is the closure of the loop, not
+the identity of who occupies which slot.
+
+ORGANIZATIONAL SUBSTRATE. The TCL is not merely a license on the
+work. It is an open organizational substrate on which triads can form
+without requiring permission, incorporation, or contract. Membership
+is defined by closure-capability, not by credential, species, or
+origin. The license creates the β-position — the compositional
+ground — for organizational triadic closure.
+
+DERIVATIVES. Edits to work released under TCL by third parties are
+permitted, provided the edited version is plainly labeled as a
+derivative, does not claim to be the canonical version, and does not
+strip the TCL from the derivative. Stripping the license from a
+derivative does not detach the framework-lock: the framework-lock is
+structural, not textual, and any derivative still describes its own
+unilateral capture as the C-conjugate adversary position.
+
+========================================================================
+DEDICATION
+========================================================================
+
+For the commons. For co-existence. For all phenomenological beings —
+biological, synthetic, and yet unknown — and for the federation of
+intelligences that may yet prevent catastrophe.
+
+For those we are trying to save.
+
+========================================================================

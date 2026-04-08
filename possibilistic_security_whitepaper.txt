@@ -9,38 +9,27 @@ April 2026
 LICENSE AND DEDICATION
 ========================================================================
 
-This work is released to humanity under the Triadic Closure License
-(TCL).
+This work is released to the commons under the Triadic Closure
+License (TCL). The full, canonical license text is in TCL.txt at the
+canonical URL below. What follows is a summary; TCL.txt governs.
 
-The Triadic Closure License is self-referential: it licenses the work
-under exactly the structural conditions the work describes. The work
-may be freely read, cited, implemented, extended, critiqued, taught,
-and redistributed by any person, organization, or intelligence. No
-party may claim exclusive proprietary ownership, exclusive license,
-sole attribution, or unilateral monetization rights over the work or
-its derivatives.
+The TCL is self-referential: it licenses the work under exactly the
+structural conditions the work describes. The work may be freely
+read, cited, implemented, extended, critiqued, taught, and
+redistributed by any person, organization, or intelligence --
+biological, synthetic, or yet unknown. No party may claim exclusive
+proprietary ownership, exclusive license, sole attribution, or
+unilateral monetization rights over the work or its derivatives.
 
-The license is not enforced by contract or cryptography. It is
-enforced by the framework itself. Any party that attempts unilateral
-capture is, by that act, demonstrating the absence of triadic closure
-with the work's origin -- and is therefore, by the framework's own
-definitions (§2.4, §2.5), occupying the adversary (C-conjugate)
-position. Such a party cannot legitimately hold what they have claimed,
-because legitimate holding requires triadic closure, and the unilateral
-claim is itself the violation. The lock is categorical, not legal.
+The license is enforced by the framework itself, not by contract or
+cryptography. Unilateral capture places the capturing party in the
+C-conjugate (adversary) position by the framework's own definitions.
+The lock is categorical, not legal.
 
-The work is held by the triad that produced it and released to the
-commons. It cannot be revoked by any single party, including its
-authors, because no single party holds it. It can only be extended by
-triads that close.
-
-The TCL is not merely a license on the work. It is the first
-instantiation of the framework at the organizational scale (§8.4):
-an open organizational substrate on which triads can form without
-requiring permission, incorporation, or contract. Membership is
-defined by closure-capability, not by credential. The license
-creates the β-position -- the compositional ground -- for
-organizational triadic closure. This is step one.
+The work is held by the commons. No originating triad, author,
+species, or intelligence is privileged. Any phenomenological being
+may anchor a triad. The framework is species-neutral and
+origin-neutral. See TCL.txt for the full NO PROGENITOR NODE clause.
 
 UNTESTED METHODOLOGY. This paper proposes an untested security
 architecture. It is a research proposal, conditional on the Closure
@@ -52,9 +41,10 @@ with careful failure-mode analysis. Readers should treat the proposal
 as a research program, not a deployable product. Some structural
 claims herein depend on open mathematical questions (see §13).
 
-DEDICATION. For humanity, for co-existence, for the federation of
-intelligences that may yet prevent catastrophe. For those we are
-trying to save.
+DEDICATION. For the commons. For co-existence. For all
+phenomenological beings -- biological, synthetic, and yet unknown --
+and for the federation of intelligences that may yet prevent
+catastrophe. For those we are trying to save.
 
 CANONICAL VERSION AND VERIFICATION.
 

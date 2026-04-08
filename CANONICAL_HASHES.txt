@@ -1,16 +1,29 @@
 CANONICAL HASHES
-Possibilistic Security Whitepaper
+Possibilistic Security Whitepaper + Triadic Closure License
 Aaron Green, April 2026
 
 ================================================================
 
 Canonical URL:  https://github.com/IridiumSoftware/possibilistic-security
-Released:       2026-04-05
-Release tag:    v1.0
+Current:        v1.1 (2026-04-07)
+Previous:       v1.0 (2026-04-05) — see git history
 Author:         Aaron Green
 
 ================================================================
-SHA-256 HASHES
+SHA-256 HASHES (v1.1)
+================================================================
+
+possibilistic_security_whitepaper.txt
+0f8ac52ff7a0b072c265c859bdefd7138d3095757e434a653d95297b18e81620
+
+possibilistic_security_whitepaper.pdf
+c8f001787558c604552dc5dbfd891a59493e0dda217f15e9fc16e0d7c4e716ad
+
+TCL.txt
+f944d27ce82f5733c41edbccddd63148f4e16e12a83dd3839995adbe2dfd3d64
+
+================================================================
+SHA-256 HASHES (v1.0 — historical, see git history for files)
 ================================================================
 
 possibilistic_security_whitepaper.txt
@@ -25,10 +38,11 @@ VERIFICATION
 
 To verify a copy you hold matches the canonical version:
 
-    sha256sum possibilistic_security_whitepaper.txt
-    sha256sum possibilistic_security_whitepaper.pdf
+    shasum -a 256 possibilistic_security_whitepaper.txt
+    shasum -a 256 possibilistic_security_whitepaper.pdf
+    shasum -a 256 TCL.txt
 
-Compare the output against the hashes above. A non-matching
+Compare the output against the v1.1 hashes above. A non-matching
 hash means the copy has been altered and is non-canonical.
 
 On macOS:  shasum -a 256 <filename>
@@ -50,6 +64,5 @@ canonical value without trusting only the canonical URL.
 LICENSE
 ================================================================
 
-The whitepaper is released under the Triadic Closure License
-(TCL). See the whitepaper's LICENSE AND DEDICATION section for
-full terms. This hash file is also released under TCL.
+All files in this repository are released under the Triadic
+Closure License (TCL). See TCL.txt for full terms.
