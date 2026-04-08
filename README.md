@@ -25,24 +25,19 @@ A structural white paper proposing a successor architecture for identity securit
 
 ## License
 
-Released under the **Triadic Closure License (TCL)**. See the whitepaper's `LICENSE AND DEDICATION` section for full terms.
+Released under the **Triadic Closure License (TCL) v1.1**. See `TCL.txt` for full terms.
 
 The license is self-referential: it licenses the work under exactly the structural conditions the work describes. The work may be freely read, cited, implemented, extended, critiqued, taught, and redistributed. No party may claim exclusive proprietary ownership. Unilateral capture is, by the framework's own definitions, the C-conjugate adversary position — and therefore self-falsifying. The lock is categorical, not legal.
 
 ## Verification
 
-To verify your copy matches the canonical v1.0 release:
+To verify your copy matches the canonical v1.1 release:
 
 ```bash
-shasum -a 256 possibilistic_security_whitepaper.txt possibilistic_security_whitepaper.pdf
+shasum -a 256 possibilistic_security_whitepaper.txt possibilistic_security_whitepaper.pdf TCL.txt
 ```
 
-Canonical hashes:
-
-```
-TXT: c8eb727147bafa319a0e729e9350e19b70b890ea5b9907ff50d4476c1d8d9bfc
-PDF: 2fb6825b8c5f8d4eae6eb56c1dca781eafea8dfba12beed027f577a4a803f75d
-```
+See `CANONICAL_HASHES.txt` for current hashes.
 
 ## Untested methodology
 
@@ -51,7 +46,6 @@ This is a research proposal. It has not been deployed, red-teamed, or formally c
 ## Companion physics paper
 
 Green, A. (2026). *Closure Forces Structure: The Standard Model from Rosen Closure on Ternary Causal Hypergraphs*. researchers.one, April 2026.
-[github.com/IridiumSoftware/closure-forces-structure](https://github.com/IridiumSoftware/closure-forces-structure)
 
 ## Triadic invitation
 
