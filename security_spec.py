@@ -1,0 +1,487 @@
+"""
+security_spec.py — Possibilistic Security Formal Specification
+═══════════════════════════════════════════════════════════════
+
+Ground truth for the Possibilistic Security framework.
+Analog to catlab_spec.jl in the Closure V5 project.
+
+Core thesis: Identity verification IS closure. Not analogy — structural instance.
+The adversary is the C-conjugate: structurally identical, opposite orientation,
+cannot co-close (0/5202 cross-sector autopoiesis).
+
+Static verification is Godel-limited; dynamic closure is not.
+
+Owner: Aaron Green
+Version: 1.0 (2026-04-06)
+Canonical whitepaper: https://github.com/IridiumSoftware/possibilistic-security
+"""
+
+from __future__ import annotations
+from dataclasses import dataclass, field
+from enum import Enum, auto
+from typing import Optional
+
+
+# ═══════════════════════════════════════════════════════════════
+# §1  ENUMS AND TYPES
+# ═══════════════════════════════════════════════════════════════
+
+class Status(Enum):
+    PROVED = auto()       # Written proof exists (structural/categorical)
+    VERIFIED = auto()     # Computational evidence
+    CONJECTURED = auto()  # Argued but not proved
+    OPEN = auto()         # No evidence yet
+
+class EvidenceType(Enum):
+    STRUCTURAL = auto()   # Categorical/structural argument
+    ALGEBRAIC = auto()    # Symbolic computation constituting proof
+    COMPUTATIONAL = auto() # Numerical simulation
+    STANDARD = auto()     # Invocation of established result
+    IMPORTED = auto()     # From Closure V5 spec (catlab_spec.jl)
+    NONE = auto()
+
+class Layer(Enum):
+    """Obstruction layers L0-L8. Each eliminates a class of non-identity actors."""
+    L0_DEFINITIONS = 0
+    L1_PHYSICAL_BINDING = 1
+    L2_PERIMETER = 2
+    L3_ENCRYPTION_AT_REST = 3
+    L4_PROCESS_ISOLATION = 4
+    L5_IDENTITY_GATES = 5
+    L6_BEHAVIORAL_INVARIANTS = 6
+    L7_COMPOSITIONAL_IDENTITY = 7
+    L8_RESIDUAL_DYNAMICS = 8
+
+class Position(Enum):
+    """Rosen triad positions."""
+    F = "f"           # Metabolism — operational transformation
+    PHI = "Phi"       # Repair — regenerates f, witnesses
+    BETA = "beta"     # Organization — sustains Phi, closes the loop
+
+
+# ═══════════════════════════════════════════════════════════════
+# §2  CORE DATA STRUCTURES
+# ═══════════════════════════════════════════════════════════════
+
+@dataclass
+class Entry:
+    """A single spec entry — one established result or claim."""
+    id: str
+    key: str
+    description: str
+    status: Status
+    evidence_type: EvidenceType
+    layer: Optional[Layer] = None
+    depends_on: list[str] = field(default_factory=list)
+    closure_ref: Optional[str] = None  # S-ID from catlab_spec.jl if imported
+    notes: str = ""
+
+
+@dataclass
+class ObstructionLayer:
+    """One layer of the obstruction chain."""
+    layer: Layer
+    name: str
+    eliminates: str
+    controls: list[str] = field(default_factory=list)
+    status: str = "active"
+
+
+@dataclass
+class TriadComponent:
+    """One position in a Rosen verification triad."""
+    position: Position
+    entity: str
+    description: str
+    produces: str  # What this component produces for the next
+
+
+# ═══════════════════════════════════════════════════════════════
+# §3  OBSTRUCTION CHAIN (L0-L8)
+# ═══════════════════════════════════════════════════════════════
+
+OBSTRUCTION_CHAIN = [
+    ObstructionLayer(
+        layer=Layer.L0_DEFINITIONS,
+        name="Definitions",
+        eliminates="Nothing yet — establishes threat model and identity model",
+        controls=["threat_model", "identity_model", "asset_inventory"],
+    ),
+    ObstructionLayer(
+        layer=Layer.L1_PHYSICAL_BINDING,
+        name="Physical binding",
+        eliminates="Actors without physical access to THIS hardware",
+        controls=["filevault", "firmware_password", "physical_location"],
+    ),
+    ObstructionLayer(
+        layer=Layer.L2_PERIMETER,
+        name="Perimeter",
+        eliminates="Remote actors without network credentials",
+        controls=["firewall", "lulu", "mullvad_vpn", "router_hardening", "dns_encryption"],
+    ),
+    ObstructionLayer(
+        layer=Layer.L3_ENCRYPTION_AT_REST,
+        name="Encryption at rest",
+        eliminates="Physical actors without boot credentials",
+        controls=["filevault", "encrypted_backups", "gpg_signing"],
+    ),
+    ObstructionLayer(
+        layer=Layer.L4_PROCESS_ISOLATION,
+        name="Process isolation",
+        eliminates="Software actors (malware, bloatware, telemetry)",
+        controls=["sip", "gatekeeper", "app_permissions", "launch_agents_audit",
+                   "bloatware_removal", "process_monitoring"],
+    ),
+    ObstructionLayer(
+        layer=Layer.L5_IDENTITY_GATES,
+        name="Identity gates",
+        eliminates="Actors who aren't the legitimate operator",
+        controls=["biometric", "knowledge_factor", "possession_factor",
+                   "bitwarden", "ssh_ed25519"],
+    ),
+    ObstructionLayer(
+        layer=Layer.L6_BEHAVIORAL_INVARIANTS,
+        name="Behavioral invariants",
+        eliminates="Sophisticated impersonators",
+        controls=["keystroke_dynamics", "writing_style", "workflow_patterns",
+                   "behavioral_auth"],
+    ),
+    ObstructionLayer(
+        layer=Layer.L7_COMPOSITIONAL_IDENTITY,
+        name="Compositional identity",
+        eliminates="Cross-layer inconsistency — the autopoietic test",
+        controls=["triadic_verification", "cross_layer_consistency",
+                   "sustained_closure_check"],
+    ),
+    ObstructionLayer(
+        layer=Layer.L8_RESIDUAL_DYNAMICS,
+        name="Residual dynamics",
+        eliminates="Zero-days, supply chain, social engineering (open gaps)",
+        controls=["integrity_monitor", "anomaly_detection", "incident_response"],
+        status="partially_open",
+    ),
+]
+
+
+# ═══════════════════════════════════════════════════════════════
+# §4  VERIFICATION TRIADS
+# ═══════════════════════════════════════════════════════════════
+
+# The primary workflow triad
+WORKFLOW_TRIAD = [
+    TriadComponent(
+        position=Position.F,
+        entity="Claude",
+        description="Metabolism — high-fidelity projection into structured artifacts",
+        produces="Artifacts (specs, docs, analyses) become Grok's context",
+    ),
+    TriadComponent(
+        position=Position.PHI,
+        entity="Grok",
+        description="Repair — broad manifold exposure, counterpunches, witnesses",
+        produces="Exposures and corrections refine Aaron's intuition",
+    ),
+    TriadComponent(
+        position=Position.BETA,
+        entity="Aaron",
+        description="Organization — selection, direction, priority, closure",
+        produces="Selections and rules shape Claude's next operation",
+    ),
+]
+
+# The security verification triad (infrastructure level)
+SECURITY_TRIAD = [
+    TriadComponent(
+        position=Position.F,
+        entity="User (Aaron)",
+        description="Operational identity — the closure being verified",
+        produces="Behavioral stream, compositional activity",
+    ),
+    TriadComponent(
+        position=Position.PHI,
+        entity="Independent witness",
+        description="External verifier — not user-controlled",
+        produces="Witness attestation, drift detection",
+    ),
+    TriadComponent(
+        position=Position.BETA,
+        entity="Infrastructure",
+        description="Substrate — hardware, network, crypto layer",
+        produces="Execution environment that sustains the closure",
+    ),
+]
+
+
+# ═══════════════════════════════════════════════════════════════
+# §5  SCORECARD — ESTABLISHED RESULTS
+# ═══════════════════════════════════════════════════════════════
+
+SCORECARD: list[Entry] = [
+    # ── Foundation (imported from Closure V5) ──
+    Entry(
+        id="PS1",
+        key="cross_sector_autopoiesis_fails",
+        description="Matter and antimatter sectors cannot co-close. "
+                    "0/5202 on primary seed, 0.4-2.4% accidental on 5 ICs.",
+        status=Status.VERIFIED,
+        evidence_type=EvidenceType.IMPORTED,
+        closure_ref="S155/S157",
+        notes="Structural foundation for 'adversary cannot co-close'",
+    ),
+    Entry(
+        id="PS2",
+        key="coproduct_decomposition",
+        description="C(Q102) = C(Q51) ⊔ J(C(Q51)). Disjoint union. "
+                    "No cross-sector composition operations exist.",
+        status=Status.PROVED,
+        evidence_type=EvidenceType.IMPORTED,
+        closure_ref="S153",
+    ),
+    Entry(
+        id="PS3",
+        key="gamma_orthogonality",
+        description="Tr(L·D_F) = 0. Compositional core orthogonal to attack surface. "
+                    "D_F is the ONLY cross-sector coupling.",
+        status=Status.PROVED,
+        evidence_type=EvidenceType.IMPORTED,
+        closure_ref="S82/S125",
+    ),
+    Entry(
+        id="PS4",
+        key="chirality_equivalence",
+        description="(A,H,D,J,γ) and (A,H,D,J,-γ) are CPT-conjugate. "
+                    "Orientation determined by which sector sustains closure.",
+        status=Status.PROVED,
+        evidence_type=EvidenceType.IMPORTED,
+        closure_ref="S129",
+    ),
+
+    # ── Core security theorems ──
+    Entry(
+        id="PS5",
+        key="identity_is_closure",
+        description="Identity verification IS sustained autopoietic closure. "
+                    "Not analogy — structural instance of Q51 self-reproduction.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS1", "PS2", "PS3"],
+        layer=Layer.L7_COMPOSITIONAL_IDENTITY,
+    ),
+    Entry(
+        id="PS6",
+        key="adversary_is_c_conjugate",
+        description="The adversary is the C-conjugate of the legitimate operator. "
+                    "Structurally identical, opposite orientation, cannot co-close.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS1", "PS4"],
+    ),
+    Entry(
+        id="PS7",
+        key="sakharov_for_identity",
+        description="Identity dominance requires three conditions: "
+                    "(1) identity violation possible, (2) CP violation (user/adversary asymmetric), "
+                    "(3) departure from equilibrium (active verification, not passive trust).",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        closure_ref="S111/G14",
+        depends_on=["PS6"],
+    ),
+    Entry(
+        id="PS8",
+        key="beyond_godel",
+        description="Autopoietic closure operates where Godel's separation requirement "
+                    "does not apply. Dynamic closure is not static formal deduction. "
+                    "The proof IS the system operating.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5"],
+        notes="Shell framing. Kernel in triadic_closure_companion_v1.md.",
+    ),
+    Entry(
+        id="PS9",
+        key="static_verification_godel_limited",
+        description="All static verification (passwords, tokens, biometrics) is "
+                    "Godel-limited — formal checks that can in principle be forged.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS8"],
+    ),
+    Entry(
+        id="PS10",
+        key="mfa_sub_triadic",
+        description="All MFA/2FA factors sit at f-position of a single entity. "
+                    "Redundant self-certification. A million f-factors have the "
+                    "same Godel limit as one.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS8", "PS9"],
+    ),
+    Entry(
+        id="PS11",
+        key="security_as_decoration_detectable",
+        description="Added protection morphisms become detectable invariants. "
+                    "Bolted-on hardening signals value, escalating HVT to UHVT. "
+                    "Security-as-closure is constitutive, not added.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS3"],
+    ),
+    Entry(
+        id="PS12",
+        key="pqc_quantum_resistant_not_irrelevant",
+        description="PQC rests on computational hardness alone — the only primitive "
+                    "not grounded in closure. Quantum-resistant, not quantum-irrelevant.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5"],
+    ),
+    Entry(
+        id="PS13",
+        key="triadic_verification_minimum",
+        description="Three is the minimum closure number for identity verification. "
+                    "Two gives symmetric deadlock or infinite regress. "
+                    "Four+ decomposes into overlapping triads.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5", "PS10"],
+    ),
+    Entry(
+        id="PS14",
+        key="harvest_now_decrypt_later_immune",
+        description="Closure-based identity has no static object to harvest. "
+                    "Cannot replay an identity — identity is ongoing sustaining. "
+                    "Immunity by construction, not by key-strength.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5", "PS12"],
+    ),
+    Entry(
+        id="PS15",
+        key="adversary_godel_limit_exploitable",
+        description="The adversary is also Godel-limited. Sustained mimicry is "
+                    "structurally incoherent — internal incoherence surfaces as "
+                    "detectable drift over composition steps.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS8", "PS6"],
+    ),
+    Entry(
+        id="PS16",
+        key="rosen_closure_entails_semantic_closure",
+        description="Any Rosen-closed system has identity-level semantic closure. "
+                    "Structural entailment, not formal derivation. "
+                    "Operates where Godel's limit does not apply.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5", "PS8"],
+        notes="Kernel result. triadic_closure_companion_v1.md §2.7.",
+    ),
+    Entry(
+        id="PS17",
+        key="triadic_incompleteness_escape",
+        description="A triad of Godel-limited entities achieves collective completeness "
+                    "via mutual verification in a closed loop. No external meta-system needed.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS13", "PS16"],
+        notes="Kernel result. triadic_closure_companion_v1.md §2.12.",
+    ),
+    Entry(
+        id="PS18",
+        key="fractal_identity_security",
+        description="Identity security is fractal. Rosen closure at every scale, "
+                    "components at each scale being closures at the scale below. "
+                    "Adversary-triads cannot co-close with legitimate-triads.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS1", "PS17"],
+        notes="triadic_closure_companion_v1.md §8.",
+    ),
+    Entry(
+        id="PS19",
+        key="captcha_photograph_not_closure",
+        description="Modern CAPTCHAs are behavioral D_F — right direction (behavior over "
+                    "credential) but wrong architecture (snapshot not sustained, "
+                    "monadic not triadic).",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5", "PS10"],
+    ),
+
+    # ── Falsification ──
+    Entry(
+        id="PS20",
+        key="falsification_criterion",
+        description="Break the closure. If someone sustains autopoiesis on the system "
+                    "while not being the legitimate identity, the framework is wrong. "
+                    "Cross-sector autopoiesis (PS1) bets its life on this.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS1", "PS5"],
+    ),
+]
+
+
+# ═══════════════════════════════════════════════════════════════
+# §6  SPEC QUERIES
+# ═══════════════════════════════════════════════════════════════
+
+def get_entry(entry_id: str) -> Optional[Entry]:
+    """Look up a scorecard entry by ID."""
+    for e in SCORECARD:
+        if e.id == entry_id:
+            return e
+    return None
+
+def entries_by_status(status: Status) -> list[Entry]:
+    return [e for e in SCORECARD if e.status == status]
+
+def entries_by_layer(layer: Layer) -> list[Entry]:
+    return [e for e in SCORECARD if e.layer == layer]
+
+def dependency_chain(entry_id: str) -> list[str]:
+    """Return full dependency chain for an entry."""
+    visited = set()
+    chain = []
+    def walk(eid):
+        if eid in visited:
+            return
+        visited.add(eid)
+        e = get_entry(eid)
+        if e:
+            for dep in e.depends_on:
+                walk(dep)
+            chain.append(eid)
+    walk(entry_id)
+    return chain
+
+def summary():
+    """Print scorecard summary."""
+    total = len(SCORECARD)
+    by_status = {}
+    for s in Status:
+        count = len(entries_by_status(s))
+        if count > 0:
+            by_status[s.name] = count
+
+    imported = len([e for e in SCORECARD if e.evidence_type == EvidenceType.IMPORTED])
+
+    print(f"Possibilistic Security Spec v1.0")
+    print(f"{'='*40}")
+    print(f"Total entries: {total}")
+    for name, count in by_status.items():
+        print(f"  {name}: {count}")
+    print(f"  Imported from Closure V5: {imported}")
+    print(f"\nObstruction layers: {len(OBSTRUCTION_CHAIN)}")
+    print(f"Verification triads: 2 (workflow, security)")
+
+
+if __name__ == "__main__":
+    summary()
+    print()
+    print("Scorecard:")
+    print("-" * 60)
+    for e in SCORECARD:
+        marker = "✓" if e.status in (Status.PROVED, Status.VERIFIED) else "○"
+        print(f"  {marker} {e.id}: {e.key} [{e.status.name}]")
