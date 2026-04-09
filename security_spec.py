@@ -482,7 +482,7 @@ SCORECARD: list[Entry] = [
         status=Status.CONJECTURED,
         evidence_type=EvidenceType.STRUCTURAL,
         depends_on=["PS5", "PS11"],  # identity_is_closure, security_as_decoration
-        notes="Concept from Grok session. Honeypots deployed 2026-04-08.",
+        notes="Concept from Grok session. Seeds planted per 42 protocol.",
     ),
 
     # ── Falsification ──
