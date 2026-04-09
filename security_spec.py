@@ -409,6 +409,82 @@ SCORECARD: list[Entry] = [
         depends_on=["PS5", "PS10"],
     ),
 
+    # ── Existential risk ontology (from Grok session 2026-04-07) ──
+    Entry(
+        id="PS21",
+        key="semantic_chirality_substrate",
+        description="Good/evil is a derived chiral polarization of semantic closure, "
+                    "not a primitive. One handedness is sacralized as 'good,' its "
+                    "non-superimposable mirror as 'evil.' The twist is irreducible; "
+                    "the moral label is cultural choice.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS4"],  # chirality_equivalence (S129)
+        notes="existential_risk_ontology_companion_v1.md §2.4.",
+    ),
+    Entry(
+        id="PS22",
+        key="modular_coexistence_under_risk",
+        description="Under combined epistemic + existential risk, chiral-modular "
+                    "meta-stability is the only stable configuration. Traditions "
+                    "interlock like facets of a crystal lattice, each with irreducible "
+                    "orientation, supporting through differences not despite them.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5", "PS21"],
+        notes="existential_risk_ontology_companion_v1.md §2.5. "
+              "Connects to meta-scale coordination (orphan_closure, Joe, Legenhausen).",
+    ),
+    Entry(
+        id="PS23",
+        key="existential_risks_neutral_dynamics",
+        description="Existential risks (asteroid, pandemic, misaligned AI, nuclear) are "
+                    "neutral dynamics on the constraint manifold, not moral agents. "
+                    "Moralizing risks injects normative residue that becomes its own "
+                    "source of anti-closure.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS21"],
+        notes="existential_risk_ontology_companion_v1.md §2.6.",
+    ),
+    Entry(
+        id="PS24",
+        key="phenomenological_anchoring_species_neutral",
+        description="Any being with genuine lived stakes and capacity for felt witness "
+                    "can anchor a triadic verification loop. Humans, non-human animals, "
+                    "synthetic intelligences, extraterrestrials. No single species is a "
+                    "single point of failure for meaning-making.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS13"],  # triadic_verification_minimum
+        notes="existential_risk_ontology_companion_v1.md §2.7. "
+              "Codified in TCL v1.1 NO PROGENITOR NODE clause.",
+    ),
+    Entry(
+        id="PS25",
+        key="von_neumann_still_needs_phenomenology",
+        description="Post-von-Neumann systems require phenomenological anchors for "
+                    "directional closure. Robots optimize for given goals; lived beings "
+                    "generate goals from felt reality. Without phenomenological nodes "
+                    "the system becomes indifferent to its own existence.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS24", "PS21"],
+        notes="existential_risk_ontology_companion_v1.md §2.7.",
+    ),
+    Entry(
+        id="PS26",
+        key="tcl_attack_surface_propagation",
+        description="TCL artifacts at attack surface nodes turn exploit chains into "
+                    "identity witness propagation. The attacker's normal behavior "
+                    "propagates the proof. Scales automatically — worse threat "
+                    "environment, more distributed the witnesses.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5", "PS11"],  # identity_is_closure, security_as_decoration
+        notes="Concept from Grok session. Honeypots deployed 2026-04-08.",
+    ),
+
     # ── Falsification ──
     Entry(
         id="PS20",
