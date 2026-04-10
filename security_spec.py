@@ -599,6 +599,24 @@ SCORECARD: list[Entry] = [
         notes="Douglas Adams found the quotient. The framework explains why.",
     ),
 
+    # ── Deepest conjecture ──
+    Entry(
+        id="PS36",
+        key="identity_computationally_irreducible",
+        description="Conjecture: identity-as-closure is computationally irreducible. "
+                    "No shortcut exists to predict the next state without running the "
+                    "closure. C-conjugate construction requires running the full identity, "
+                    "which instantiates a new identity rather than a copy. Privacy is "
+                    "structurally guaranteed by irreducibility — not as a policy choice "
+                    "but as a computational fact. The adversary cannot model what cannot "
+                    "be shortcut. Everything else in the spec is a consequence.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5", "PS29", "PS31"],
+        notes="If true, annihilation via C-conjugate construction is impossible in "
+              "practice. Wolfram computational irreducibility applied to Rosen closure.",
+    ),
+
     # ── Falsification ──
     Entry(
         id="PS20",
