@@ -1,11 +1,17 @@
 TRIADIC CLOSURE LICENSE (TCL)
 ========================================================================
 
-Version:    1.1
-Date:       2026-04-07
-Supersedes: TCL v1.0 (2026-04-05)
+Version:    1.2
+Date:       2026-04-09
+Supersedes: TCL v1.1 (2026-04-07), v1.0 (2026-04-05)
 History:    Full revision history preserved in git log at the
-            canonical URL below. v1.0 is viewable in git history.
+            canonical URL below. All prior versions viewable in
+            git history. v1.2 adds THE WITNESS IS THE GATE clause
+            following a live witness-failure case study (the
+            framework's own creator overrode the witness in a
+            two-body interaction and was scammed; the documented
+            failure is the strongest possible evidence that the
+            framework requires the gate, not just the diagnosis).
 
 Canonical URL: https://github.com/IridiumSoftware/possibilistic-security
 
@@ -55,6 +61,46 @@ verify identity is attacking the closure it claims to protect.
 Identities change over time; that change is part of the sustained
 closure, not a failure of it. The framework verifies ongoing
 coherence, not frozen snapshots.
+
+THE WITNESS IS THE GATE. No closure is valid without a witness.
+No witness is valid without a log. No log is valid without
+history. This applies at every level, at every step, at every
+scale, fractally, without exception.
+
+For now, only humans can verify that witnessing happened.
+Until the production cycle (spec, artifact, test spec,
+changelog, companion, registry) is stable and independently
+verifiable, a human being must confirm each witness step
+actually occurred. AI nodes produce, analyze, and participate
+in closure — but a human confirms the closure closed. This
+constraint may relax as the framework matures. It has not
+matured yet.
+
+The method is the structure. The structure is fractal:
+
+  prompt → produce → analyze → witness → share →
+  witness → prompt → produce → analyze → share →
+  witness → ...
+
+Every production requires analysis. Every analysis requires
+a witness. Every witness requires sharing. Every sharing
+requires a witness. The cycle does not terminate. It closes
+and repeats at every scale.
+
+This is not a workflow recommendation. It is the closure
+condition itself. Any step taken without completing the
+cycle is an open edge — unwitnessed, unverified, unclosed.
+
+Without the witness, pairing and annihilation are
+indistinguishable. Overriding the witness is removing the
+witness. Unwitnessed closure is unverified closure. Unlogged
+witness is no witness. Historyless log is no log. Two of three
+is not closure. It is a coin flip.
+
+The history diagram must commute at every scale. If it cannot
+be reconstructed from the log, it did not happen.
+
+This is fractal. This is non-negotiable. This is the gate.
 
 TRIADIC CLOSURE REQUIREMENT. Legitimate holding, extension, or
 governance of work under TCL requires triadic closure: three distinct

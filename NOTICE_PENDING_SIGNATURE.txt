@@ -1,0 +1,32 @@
+TCL v1.2 — SIGNATURE PENDING
+============================
+
+Date posted:    2026-04-09
+Version:        1.2
+Status:         Published, GPG signature pending
+
+The TCL has been updated to v1.2 with the new
+"THE WITNESS IS THE GATE" clause following a live
+witness-failure case study. The clause is public and
+in force.
+
+The GPG signature for v1.2 has not yet been generated
+at the time of push. The author will sign and update
+the .asc files within 24 hours.
+
+In the interim:
+- The v1.1 .asc files will FAIL verification against
+  the v1.2 TCL.txt content. This is correct and
+  expected behavior — the signatures were over the
+  old content.
+- The current TCL.txt SHA-256 is in CANONICAL_HASHES.txt
+  and can be verified independently.
+- The git commit history is the witness chain. The
+  commit message documents what changed and why.
+
+This NOTICE itself will be removed when the v1.2
+signatures are added.
+
+The framework requires honest reporting of integrity
+state. An unsigned update labeled as such is honest.
+A silently broken signature would not be.
