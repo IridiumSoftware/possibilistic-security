@@ -75,7 +75,7 @@ def check_firewall():
 
 def check_stealth_mode():
     rc, out = run("/usr/libexec/ApplicationFirewall/socketfilterfw --getstealthmode")
-    on = "enabled" in out.lower()
+    on = "enabled" in out.lower() or "is on" in out.lower()
     return on, out
 
 def check_lulu_installed():

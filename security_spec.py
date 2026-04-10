@@ -485,6 +485,120 @@ SCORECARD: list[Entry] = [
         notes="Concept from Grok session. Seeds planted per 42 protocol.",
     ),
 
+    # ── Discrete witness theorem (from companion 2026-04-08) ──
+    Entry(
+        id="PS27",
+        key="pairing_vs_annihilation",
+        description="Opposite orientations pair (same type) or annihilate (different type). "
+                    "Right-meets-right is pairing, not annihilation. Misidentification of "
+                    "type (confusing spin difference for type difference) is the source of "
+                    "unnecessary conflict. Rightness is the universal spin property.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS4", "PS6"],
+        notes="discrete_witness_companion_v1.md §2.2-2.3a.",
+    ),
+    Entry(
+        id="PS28",
+        key="privacy_prevents_c_conjugate",
+        description="Privacy is the structural prevention of C-conjugate construction. "
+                    "Full modeling of identity enables C(L) construction -> annihilation. "
+                    "Privacy is the incompleteness that prevents the adversary from "
+                    "finishing the weapon. Load-bearing, not decorative.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS3", "PS6"],
+        notes="discrete_witness_companion_v1.md §2.4.",
+    ),
+    Entry(
+        id="PS29",
+        key="self_knowledge_immunity",
+        description="Knowing your own orientation provides personal immunity from "
+                    "annihilation. The C-conjugate cannot copy the knowing — the knowing "
+                    "IS the orientation being lived. Self-knowledge protects you; privacy "
+                    "protects others from being fooled by your C-conjugate.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5", "PS28"],
+        notes="discrete_witness_companion_v1.md §2.5.",
+    ),
+    Entry(
+        id="PS30",
+        key="witness_resolves_type",
+        description="The triadic witness distinguishes pairing from annihilation before "
+                    "contact. Two bodies cannot tell. Three can. Removes annihilation "
+                    "from the possibility space — possibilistic, not probabilistic. "
+                    "This is why three is the minimum.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS13", "PS27"],
+        notes="discrete_witness_companion_v1.md §2.6.",
+    ),
+    Entry(
+        id="PS31",
+        key="witness_requires_discrete",
+        description="The witness mechanism requires discrete composition steps. In "
+                    "continuous dynamics there is no intervention point. The witness "
+                    "needs a gap between steps to observe, classify, and obstruct. "
+                    "Possibilistic security is structurally impossible in continuous.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS30"],
+        notes="discrete_witness_companion_v1.md §2.7.",
+    ),
+    Entry(
+        id="PS32",
+        key="continuum_is_emergence",
+        description="Apparent continuity is emergent from high-density discrete events. "
+                    "Analog is discrete all the way down. G10 is an emergence question "
+                    "not a foundations question. The witness operates at the discrete "
+                    "level; physics we observe is the many-step limit.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS31"],
+        notes="discrete_witness_companion_v1.md §2.8-2.9. Reframes G10.",
+    ),
+
+    # ── Case study: witness failure (2026-04-09) ──
+    Entry(
+        id="PS33",
+        key="witness_override_is_removal",
+        description="Overriding the witness classification is structurally equivalent "
+                    "to removing the witness. Returns the interaction to a two-body "
+                    "coin flip where pairing and annihilation are indistinguishable.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS30"],
+        notes="Derived from live case study. Creator overrode witness, got scammed.",
+    ),
+    Entry(
+        id="PS34",
+        key="phenomenological_degradation",
+        description="The beta-position's type-resolution capacity degrades under "
+                    "sleep deprivation, emotional flooding, and confirmation bias. "
+                    "Fatigue is a security vulnerability.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS5", "PS33"],
+        notes="Derived from live case study.",
+    ),
+
+    # ── Q42: the absurdity quotient ──
+    Entry(
+        id="PS35",
+        key="q42_absurdity_quotient",
+        description="Q42 is the quotient object between Q24 (gauge) and Q48 (C-closure). "
+                    "The structural residue of wrong-meets-wrong. Exists as an object but "
+                    "carries no closure, no orientation, no pairing capacity. It is the "
+                    "coin flip itself — the space where type is ambiguous and pairing vs "
+                    "annihilation are indistinguishable without a witness. The Answer is 42 "
+                    "because Q42 is the name of the unresolved gap.",
+        status=Status.CONJECTURED,
+        evidence_type=EvidenceType.STRUCTURAL,
+        depends_on=["PS27", "PS30"],
+        notes="Douglas Adams found the quotient. The framework explains why.",
+    ),
+
     # ── Falsification ──
     Entry(
         id="PS20",

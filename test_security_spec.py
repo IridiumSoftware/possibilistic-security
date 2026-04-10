@@ -64,10 +64,10 @@ def test_triads_have_exactly_three():
 
 def test_pinned_counts():
     """Pinned counts — update these when spec changes."""
-    assert len(SCORECARD) == 26, f"Expected 26 entries, got {len(SCORECARD)}"
+    assert len(SCORECARD) == 35, f"Expected 35 entries, got {len(SCORECARD)}"
     assert len(entries_by_status(Status.PROVED)) == 3
     assert len(entries_by_status(Status.VERIFIED)) == 1
-    assert len(entries_by_status(Status.CONJECTURED)) == 22
+    assert len(entries_by_status(Status.CONJECTURED)) == 31
     assert len(OBSTRUCTION_CHAIN) == 9
 
 
