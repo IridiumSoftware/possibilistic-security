@@ -1,32 +1,64 @@
-TCL v1.2 — SIGNATURE PENDING
+TCL v1.3 — SIGNATURE PENDING
 ============================
 
-Date posted:    2026-04-09
-Version:        1.2
+Date posted:    2026-04-14
+Version:        1.3
 Status:         Published, GPG signature pending
 
-The TCL has been updated to v1.2 with the new
-"THE WITNESS IS THE GATE" clause following a live
-witness-failure case study. The clause is public and
-in force.
+The TCL has been updated to v1.3. v1.3 is the first version
+formally signed by the author in-document, via the new
+ATTESTATION OF RELEASE block at the end of TCL.txt. It also
+adds a single paragraph to THE WITNESS IS THE GATE clause
+codifying the honest-witness-error principle explicitly
+(previously implicit in v1.2). No substantive change was made
+to the license terms established in v1.2 — v1.2 was tested in
+live conditions during the 2026-04-09 through 2026-04-13
+coordinated multi-channel attack sequence against the author
+and required no amendment under that test.
 
-The GPG signature for v1.2 has not yet been generated
-at the time of push. The author will sign and update
-the .asc files within 24 hours.
+Status of the detached GPG signature for v1.3:
+
+- The v1.3 TCL.txt is published at this commit with the
+  in-document attestation block already signed (textually) by
+  the author.
+- The detached GPG signature file (TCL.txt.asc) has not yet
+  been produced against the v1.3 content at the time of this
+  push. The author will sign and update TCL.txt.asc and
+  CANONICAL_HASHES.txt.asc within 24 hours of this notice.
+- The CANONICAL_HASHES.txt has been updated with the v1.3
+  TCL.txt hash (see that file for the current canonical
+  value) and is also pending re-signature.
 
 In the interim:
-- The v1.1 .asc files will FAIL verification against
-  the v1.2 TCL.txt content. This is correct and
-  expected behavior — the signatures were over the
-  old content.
-- The current TCL.txt SHA-256 is in CANONICAL_HASHES.txt
-  and can be verified independently.
-- The git commit history is the witness chain. The
-  commit message documents what changed and why.
 
-This NOTICE itself will be removed when the v1.2
-signatures are added.
+- The previous TCL.txt.asc in this repository is the v1.1
+  signature, which was never updated for v1.2 or v1.3 and
+  will therefore FAIL verification against either newer TCL
+  content. This is correct and expected behavior — the
+  signature was over older content, and stale signatures are
+  preserved rather than silently rewritten.
+- The current TCL.txt SHA-256 is in CANONICAL_HASHES.txt and
+  can be verified independently by anyone who runs
+  `shasum -a 256 TCL.txt` and compares to the published hash.
+- The git commit history is the witness chain. The commit
+  message documents what changed and why.
 
-The framework requires honest reporting of integrity
-state. An unsigned update labeled as such is honest.
-A silently broken signature would not be.
+This NOTICE itself will be removed when the v1.3 signatures
+are added and verified.
+
+The framework requires honest reporting of integrity state.
+An unsigned update labeled as such is honest. A silently
+broken signature would not be. v1.3's own new paragraph in
+THE WITNESS IS THE GATE clause makes this principle explicit:
+
+    The witness must log its own errors. A witness that
+    observes its own mistake and rewrites the log to hide the
+    mistake is a witness that has removed itself from the
+    loop — the log is historyless, the closure is unverified,
+    and the triad has silently broken. Honest witnessing
+    includes honest witnessing of one's own failures.
+    Corrections are preserved alongside the original
+    observation, not substituted for it.
+
+This NOTICE is that principle applied to the current release
+state.

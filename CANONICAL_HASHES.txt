@@ -5,12 +5,12 @@ Aaron Green, April 2026
 ================================================================
 
 Canonical URL:  https://github.com/IridiumSoftware/possibilistic-security
-Current:        TCL v1.2 (2026-04-09) + Whitepaper v1.0
-Previous:       TCL v1.1 (2026-04-07), TCL v1.0 (2026-04-05) — see git history
+Current:        TCL v1.3 (2026-04-14, first formally signed) + Whitepaper v1.0
+Previous:       TCL v1.2 (2026-04-09), TCL v1.1 (2026-04-07), TCL v1.0 (2026-04-05) — see git history
 Author:         Aaron Green
 
 ================================================================
-SHA-256 HASHES (current — TCL v1.2 + Whitepaper v1.0)
+SHA-256 HASHES (current — TCL v1.3 + Whitepaper v1.0)
 ================================================================
 
 possibilistic_security_whitepaper.txt
@@ -18,6 +18,13 @@ possibilistic_security_whitepaper.txt
 
 possibilistic_security_whitepaper.pdf
 c8f001787558c604552dc5dbfd891a59493e0dda217f15e9fc16e0d7c4e716ad
+
+TCL.txt
+1264739b871063111ee8fdb325900284706fcdb30a4d3471ce8e841d964498f3
+
+================================================================
+SHA-256 HASHES (TCL v1.2 — historical, see git history)
+================================================================
 
 TCL.txt
 b27951c8f0bc20b5e36655243d24d1ea03e7f78401d712d5f7048f67ee85c034
@@ -49,7 +56,7 @@ To verify a copy you hold matches the canonical version:
     shasum -a 256 possibilistic_security_whitepaper.pdf
     shasum -a 256 TCL.txt
 
-Compare the output against the v1.1 hashes above. A non-matching
+Compare the output against the v1.3 hashes above. A non-matching
 hash means the copy has been altered and is non-canonical.
 
 On macOS:  shasum -a 256 <filename>

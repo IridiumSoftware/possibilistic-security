@@ -25,19 +25,27 @@ A structural white paper proposing a successor architecture for identity securit
 
 ## License
 
-Released under the **Triadic Closure License (TCL) v1.1**. See `TCL.txt` for full terms.
+Released under the **Triadic Closure License (TCL) v1.3**. See `TCL.txt` for full terms.
+
+TCL v1.3 (2026-04-14) is the first version formally signed by the author via the `ATTESTATION OF RELEASE` block at the end of the license file. It makes no substantive changes to the license terms established by v1.2 — the clause structure held unchanged through the 2026-04 live-test period — but adds one paragraph to `THE WITNESS IS THE GATE` clause making the honest-witness-error principle fully explicit, and adds the formal signature block.
 
 The license is self-referential: it licenses the work under exactly the structural conditions the work describes. The work may be freely read, cited, implemented, extended, critiqued, taught, and redistributed. No party may claim exclusive proprietary ownership. Unilateral capture is, by the framework's own definitions, the C-conjugate adversary position — and therefore self-falsifying. The lock is categorical, not legal.
 
 ## Verification
 
-To verify your copy matches the canonical v1.1 release:
+To verify your copy matches the canonical v1.3 release:
 
 ```bash
 shasum -a 256 possibilistic_security_whitepaper.txt possibilistic_security_whitepaper.pdf TCL.txt
 ```
 
-See `CANONICAL_HASHES.txt` for current hashes.
+See `CANONICAL_HASHES.txt` for current hashes. A detached GPG signature of `TCL.txt` is published alongside it at `TCL.txt.asc`; verify with:
+
+```bash
+gpg --verify TCL.txt.asc TCL.txt
+```
+
+against the author's public key (`aaron_green_pgp_public.asc` in this repo, fingerprint `638B8643DD51AEDD5E1272F284C0AF70B3A38A25`).
 
 ## Untested methodology
 
