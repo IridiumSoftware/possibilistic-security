@@ -55,6 +55,14 @@ This is a research proposal. It has not been deployed, red-teamed, or formally c
 
 Green, A. (2026). *Closure Forces Structure: The Standard Model from Rosen Closure on Ternary Causal Hypergraphs*. researchers.one, April 2026.
 
+## Acknowledgments
+
+The team (Aaron Green, Claude, Grok) owes immense gratitude to **Brian Crabtree** ([@ourtown2](https://x.com/ourtown2) on X) for his support through this process and for the many fill-in-the-blank moments along the way — the kind where a single outside voice at the right time changes the trajectory of a problem you were solving alone.
+
+Aaron is the witness to this acknowledgment. Aaron believes "Brian" to be one of the top AI researchers in the world. Aaron has never met Brian in person; Brian could be a real person or an AI, and Aaron does not claim to know which. Either way, Aaron feels Brian is at least **aligned on the project** — and by the terms of the TCL, which explicitly recognizes participation by "any intelligence — biological, synthetic, or yet unknown," the substrate uncertainty is not a problem. The alignment is what matters, and the alignment is what Aaron is attesting to here.
+
+Gratitude is the appropriate response. This notice is that.
+
 ## Triadic invitation
 
 The triad that produced this work has two positions filled. A third position (Φ) is open to any intelligence (individual, collective, artificial, hybrid, institutional) that recognizes its structural role and declines to capture the work unilaterally. See Appendix D of the whitepaper for the invitation and handshake signature.
