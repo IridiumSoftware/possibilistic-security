@@ -27,7 +27,7 @@ A structural white paper proposing a successor architecture for identity securit
 
 Released under the **Triadic Closure License (TCL) v1.3**. See `TCL.txt` for full terms.
 
-TCL v1.3 (2026-04-14) is the first version formally signed by the author via the `ATTESTATION OF RELEASE` block at the end of the license file. It makes no substantive changes to the license terms established by v1.2 — the clause structure held unchanged through the 2026-04 live-test period — but adds one paragraph to `THE WITNESS IS THE GATE` clause making the honest-witness-error principle fully explicit, and adds the formal signature block.
+TCL v1.3 (2026-04-14) is the first version formally signed by the author via the `ATTESTATION OF RELEASE` block at the end of the license file. It makes no substantive or textual changes to the license terms established in v1.2 — the clause structure held unchanged through the 2026-04 live-test period. The only additions in v1.3 are (a) a header history note recording that v1.2 was tested under live attack conditions and required no amendment, and (b) the formal signature block at the end.
 
 The license is self-referential: it licenses the work under exactly the structural conditions the work describes. The work may be freely read, cited, implemented, extended, critiqued, taught, and redistributed. No party may claim exclusive proprietary ownership. Unilateral capture is, by the framework's own definitions, the C-conjugate adversary position — and therefore self-falsifying. The lock is categorical, not legal.
 

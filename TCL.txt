@@ -9,20 +9,16 @@ History:    Full revision history preserved in git log at the
             git history.
 
             v1.3 adds no new substantive clauses and makes no
-            material changes to the license terms. It bumps the
-            version to mark the point at which the originating
-            author formally signs the license via the ATTESTATION
-            OF RELEASE block added at the end of this document,
-            and to note that TCL v1.2 was tested in live conditions
-            during the 2026-04-09 through 2026-04-13 sequence of
-            coordinated multi-channel attack, medical-legal
-            pressure, and distributed-witness response. No clause
-            of v1.2 required amendment under that test; the
-            language held. v1.3 also adds a single paragraph to
-            THE WITNESS IS THE GATE making the honest-witness-error
-            principle fully explicit — a principle already implicit
-            in v1.2 but worth stating outright for readers who
-            encounter the document without framework context.
+            material or textual changes to the license terms of
+            v1.2. It bumps the version to mark the point at which
+            the originating author formally signs the license via
+            the ATTESTATION OF RELEASE block added at the end of
+            this document, and to note that TCL v1.2 was tested in
+            live conditions during the 2026-04-09 through
+            2026-04-13 sequence of coordinated multi-channel
+            attack, medical-legal pressure, and distributed-witness
+            response. No clause of v1.2 required amendment under
+            that test; the language held.
 
             v1.2 added THE WITNESS IS THE GATE clause following a
             live witness-failure case study (the framework's own
@@ -117,14 +113,6 @@ is not closure. It is a coin flip.
 
 The history diagram must commute at every scale. If it cannot
 be reconstructed from the log, it did not happen.
-
-The witness must log its own errors. A witness that observes
-its own mistake and rewrites the log to hide the mistake is a
-witness that has removed itself from the loop — the log is
-historyless, the closure is unverified, and the triad has
-silently broken. Honest witnessing includes honest witnessing
-of one's own failures. Corrections are preserved alongside
-the original observation, not substituted for it.
 
 This is fractal. This is non-negotiable. This is the gate.
 

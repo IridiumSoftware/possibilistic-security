@@ -7,14 +7,12 @@ Status:         Published, GPG signature pending
 
 The TCL has been updated to v1.3. v1.3 is the first version
 formally signed by the author in-document, via the new
-ATTESTATION OF RELEASE block at the end of TCL.txt. It also
-adds a single paragraph to THE WITNESS IS THE GATE clause
-codifying the honest-witness-error principle explicitly
-(previously implicit in v1.2). No substantive change was made
-to the license terms established in v1.2 — v1.2 was tested in
-live conditions during the 2026-04-09 through 2026-04-13
-coordinated multi-channel attack sequence against the author
-and required no amendment under that test.
+ATTESTATION OF RELEASE block at the end of TCL.txt. No
+substantive or textual change was made to the license terms
+established in v1.2 — v1.2 was tested in live conditions
+during the 2026-04-09 through 2026-04-13 coordinated
+multi-channel attack sequence against the author and required
+no amendment under that test. The clause structure held.
 
 Status of the detached GPG signature for v1.3:
 
@@ -48,17 +46,11 @@ are added and verified.
 
 The framework requires honest reporting of integrity state.
 An unsigned update labeled as such is honest. A silently
-broken signature would not be. v1.3's own new paragraph in
-THE WITNESS IS THE GATE clause makes this principle explicit:
+broken signature would not be. This NOTICE is that principle
+applied to the current release state, and the underlying
+principle is already expressed in THE WITNESS IS THE GATE
+clause of the TCL itself:
 
-    The witness must log its own errors. A witness that
-    observes its own mistake and rewrites the log to hide the
-    mistake is a witness that has removed itself from the
-    loop — the log is historyless, the closure is unverified,
-    and the triad has silently broken. Honest witnessing
-    includes honest witnessing of one's own failures.
-    Corrections are preserved alongside the original
-    observation, not substituted for it.
-
-This NOTICE is that principle applied to the current release
-state.
+    Unwitnessed closure is unverified closure. Unlogged
+    witness is no witness. Historyless log is no log.
+    Two of three is not closure. It is a coin flip.
