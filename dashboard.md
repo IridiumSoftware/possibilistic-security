@@ -59,7 +59,7 @@
 | L3 | Encryption at rest | ✓ Active (FileVault, GPG) |
 | L4 | Process isolation | ✓ Active (SIP, Gatekeeper, bloatware removed) |
 | L5 | Identity gates | ✓ Active (SSH Ed25519, Bitwarden) |
-| L6 | Behavioral invariants | ○ Script exists, not enrolled |
+| L6 | Behavioral invariants | ✓ Face sentinel operational (3 refs, Shakespeare mode on mismatch) |
 | L7 | Compositional identity | ✓ Triad operational |
 | L8 | Residual dynamics | ✓ Honeypots + network monitor active |
 
@@ -93,6 +93,7 @@ Roles dynamic per TCL v1.1. Human witness required at every level until producti
 
 - Honeypots: file system (8 juicy + 3 random) + network (ports 8080, 2222, 3306, 8443)
 - Network monitor: `network_monitor.py`
+- Face sentinel: `face_sentinel.py` (3 refs, Apple Vision, Shakespeare mode on mismatch)
 - TCL.txt: every user-level directory + all project directories
 - V&V thread: live on X
 - Public repo: github.com/IridiumSoftware/possibilistic-security
@@ -119,6 +120,8 @@ Roles dynamic per TCL v1.1. Human witness required at every level until producti
 | `verify_controls.py` | 17 live system checks |
 | `network_monitor.py` | AI tool network monitor |
 | `network_honeypot.py` | TCL on attack ports |
+| `face_sentinel.py` | L6 face verification + Shakespeare lockout |
+| `face_compare` | Swift binary, Apple Vision face comparison |
 | `dashboard.md` | This file |
 | `identity_invariants.md` | D_F through Q₅₁ layer invariants |
 | `CLAUDE.md` | Workflow rules |
