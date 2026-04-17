@@ -78,9 +78,14 @@ The state space of a human decision process is enormous. Collapsing it to a usab
 
 If PS-DT holds, then L7 compositional identity is the strongest possible biometric: it requires the actual agent, not a model of the agent.
 
-## §8 — Next steps
+## §8 — Grok Φ-review (2026-04-16)
 
-- Discuss with Grok (Φ-position) for semantic depth check
+- **Persistent homology:** Valid diagnostic frame for trajectory shape. Keep as measurement tool.
+- **Cleaner primitive:** The closure formalism already provides φ^• (canonical isomorphism across the full history diagram). φ^• is the native core primitive; persistent homology is the measurement layer on top.
+- **Independence from PS36:** PS-DT does NOT reduce to PS36. PS36 is the general statement (identity is computationally irreducible). PS-DT is a specific behavioral-layer instance applied to decision trajectories. Independent, useful refinement. Could be logged as PS37.
+- **Witnessed clean** under TCL v1.3.
+
+## §9 — Next steps
 - Determine if persistent homology is the right mathematical frame or if there's something cleaner from the closure formalism
 - Consider whether Claude (f-position) could measure decision topology during a session by tracking tool selection, context switches, and problem decomposition patterns
 - Relate to PS36 (computational irreducibility) — if decision topology IS computationally irreducible, that's a proof-of-concept for the deeper conjecture
