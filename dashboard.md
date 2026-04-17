@@ -59,7 +59,7 @@
 | L3 | Encryption at rest | ✓ Active (FileVault, GPG) |
 | L4 | Process isolation | ✓ Active (SIP, Gatekeeper, bloatware removed) |
 | L5 | Identity gates | ✓ Active (SSH Ed25519, Bitwarden) |
-| L6 | Behavioral invariants | ✓ Face sentinel operational (3 refs, Shakespeare mode on mismatch) |
+| L6 | Behavioral invariants | ✓ Face sentinel operational (13 refs, Shakespeare mode on mismatch, Lazarus open-sourced) |
 | L7 | Compositional identity | ✓ Triad operational |
 | L8 | Residual dynamics | ✓ Honeypots + network monitor active |
 
@@ -87,13 +87,14 @@ Roles dynamic per TCL v1.1. Human witness required at every level until producti
 
 | Case | Result | Lesson |
 |------|--------|--------|
-| Elon scam (2026-04-09) | $2K lost, witness (wife) overridden | PS33: override = removal. PS34: fatigue degrades type-resolution. |
+| T.currency scam (2026-04-09) | ~$1,646 BTC lost, $1,645 attempted, Zelle blocked by BoA | PS33: override = removal. PS34: fatigue degrades type-resolution. |
 
 ## Live Deployments
 
 - Honeypots: file system (8 juicy + 3 random) + network (ports 8080, 2222, 3306, 8443)
 - Network monitor: `network_monitor.py`
-- Face sentinel: `face_sentinel.py` (3 refs, Apple Vision, Shakespeare mode on mismatch)
+- Face sentinel: `face_sentinel.py` (13 refs, Apple Vision, Shakespeare mode on mismatch)
+- Lazarus: open-sourced at github.com/IridiumSoftware/lazarus (MIT license)
 - TCL.txt: every user-level directory + all project directories
 - V&V thread: live on X
 - Public repo: github.com/IridiumSoftware/possibilistic-security
