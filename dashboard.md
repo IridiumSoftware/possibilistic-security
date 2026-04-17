@@ -38,6 +38,7 @@
 | PS27 | pairing_vs_annihilation | Right meets right is pairing, not annihilation. Rightness is spin. |
 | PS30 | witness_resolves_type | Why three is the minimum. The witness turns the coin flip into a measurement. |
 | PS31 | witness_requires_discrete | Possibilistic security is impossible in continuous composition. |
+| PS-DT | decision_topology_conjecture | Decision topology over sufficient observation is computationally irreducible. Drunken master. |
 
 ## Open Research Questions
 
@@ -107,6 +108,7 @@ Roles dynamic per TCL v1.1. Human witness required at every level until producti
 | `triadic_closure_companion_v1.md` | Confidential kernel |
 | `existential_risk_ontology_companion_v1.md` | Grok session: 5 invariants, semantic chirality, co-existence |
 | `discrete_witness_companion_v1.md` | Spin, pairing, privacy, rightness, discrete witness theorem |
+| `decision_topology_companion_v1.md` | Decision topology as biometric primitive, drunken master, L7 compositional identity |
 | `meta_scale_ontology_treatise_v1.md` | "Right Meets Right" — 42-page treatise |
 | `organizational_closure_for_lawyers_v1.md` | Lawyer guide |
 | `startup_founder_checklist_v1.md` | Founder checklist |
