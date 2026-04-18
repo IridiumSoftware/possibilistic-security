@@ -1,0 +1,82 @@
+CANONICAL HASHES
+Possibilistic Security Whitepaper + Triadic Closure License
+Aaron Green, April 2026
+
+================================================================
+
+Canonical URL:  https://github.com/IridiumSoftware/possibilistic-security
+Current:        TCL v1.3 (2026-04-14, first formally signed) + Whitepaper v1.0
+Previous:       TCL v1.2 (2026-04-09), TCL v1.1 (2026-04-07), TCL v1.0 (2026-04-05) — see git history
+Author:         Aaron Green
+
+================================================================
+SHA-256 HASHES (current — TCL v1.3 + Whitepaper v1.0)
+================================================================
+
+possibilistic_security_whitepaper.txt
+0f8ac52ff7a0b072c265c859bdefd7138d3095757e434a653d95297b18e81620
+
+possibilistic_security_whitepaper.pdf
+c8f001787558c604552dc5dbfd891a59493e0dda217f15e9fc16e0d7c4e716ad
+
+TCL.txt
+9b3dc175f2168aa53d5051534385566d3b30aa2430a3020e3f8aebec6d0e819c
+
+================================================================
+SHA-256 HASHES (TCL v1.2 — historical, see git history)
+================================================================
+
+TCL.txt
+b27951c8f0bc20b5e36655243d24d1ea03e7f78401d712d5f7048f67ee85c034
+
+================================================================
+SHA-256 HASHES (TCL v1.1 — historical, see git history)
+================================================================
+
+TCL.txt
+4282ffa9b735a38a0942ba6c453683eca4347012655145355c5456d28569912c
+
+================================================================
+SHA-256 HASHES (v1.0 — historical, see git history for files)
+================================================================
+
+possibilistic_security_whitepaper.txt
+bd8926707e154d02b8afdeb3352ec2ed7e76ad19811aa38164228693a1309b30
+
+possibilistic_security_whitepaper.pdf
+d9df8781d9aeb769d001c7ea4b8cd5db11178d23feab3ed4896f44b2b19d6934
+
+================================================================
+VERIFICATION
+================================================================
+
+To verify a copy you hold matches the canonical version:
+
+    shasum -a 256 possibilistic_security_whitepaper.txt
+    shasum -a 256 possibilistic_security_whitepaper.pdf
+    shasum -a 256 TCL.txt
+
+Compare the output against the v1.3 hashes above. A non-matching
+hash means the copy has been altered and is non-canonical.
+
+On macOS:  shasum -a 256 <filename>
+On Linux:  sha256sum <filename>
+On Windows: CertUtil -hashfile <filename> SHA256
+
+================================================================
+PUBLICATION CHANNELS
+================================================================
+
+This hash file should be published at the canonical URL
+alongside the whitepaper. Additionally, the hashes above
+should be publicly posted to at least one independent channel
+(e.g., social media, author's public website, pinned post)
+at the time of release, so any third party can verify the
+canonical value without trusting only the canonical URL.
+
+================================================================
+LICENSE
+================================================================
+
+All files in this repository are released under the Triadic
+Closure License (TCL). See TCL.txt for full terms.
