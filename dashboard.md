@@ -41,6 +41,16 @@
 | PS-DT | decision_topology_conjecture | Decision topology over sufficient observation is computationally irreducible. Drunken master. |
 | PS34-inv | type_resolution_sharpening | Sustained engagement sharpens type-resolution. PS34 in reverse. Confirmed 4/16–4/18. |
 
+## Action Items
+
+1. **RocketMan honeypotting + deep forensics** — Aaron has additional evidence from original attacker (@RocketMan4798). Feign fragility, lure, collect info, confirm fake, report, mute, block, log. Authorities may find the collected interaction data valuable. Additional WhatsApp evidence from 4/9-4/10 recovered and filed.
+2. **SDI application** — edd.ca.gov/disability. Required to receive pay during LOA.
+3. **Remaining filing cascade** — Boston PD, Suffolk County DA, MA AG, LA County DA, CA AG, Grafton callback.
+4. **Microsoft Authenticator → Bitwarden migration** — bring infected phone on guest subnet, transfer TOTP seeds.
+5. **GitHub backup of Research Papers** — harden GitHub first (rotate password, confirm 2FA, check sessions), then push private repo.
+6. **BoA fraud call** — 1-800-432-1000, 8am-8pm ET.
+7. **Decision topology (PS-DT) literature review + research direction** — see companion doc.
+
 ## Open Research Questions
 
 | Question | Status | Notes |
