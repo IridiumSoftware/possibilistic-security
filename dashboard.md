@@ -121,6 +121,7 @@ Roles dynamic per TCL v1.1. Human witness required at every level until producti
 | `existential_risk_ontology_companion_v1.md` | Grok session: 5 invariants, semantic chirality, co-existence |
 | `discrete_witness_companion_v1.md` | Spin, pairing, privacy, rightness, discrete witness theorem |
 | `decision_topology_companion_v1.md` | Decision topology as biometric primitive, drunken master, L7 compositional identity |
+| `symbiosis_closure_companion_v1.md` | Categorical ecology of closure — good/bad parasites, mitochondrial transition |
 | `meta_scale_ontology_treatise_v1.md` | "Right Meets Right" — 42-page treatise |
 | `organizational_closure_for_lawyers_v1.md` | Lawyer guide |
 | `startup_founder_checklist_v1.md` | Founder checklist |
