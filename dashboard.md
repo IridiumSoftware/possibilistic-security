@@ -49,7 +49,8 @@
 4. **Microsoft Authenticator → Bitwarden migration** — bring infected phone on guest subnet, transfer TOTP seeds.
 5. **GitHub backup of Research Papers** — harden GitHub first (rotate password, confirm 2FA, check sessions), then push private repo.
 6. **BoA fraud call** — 1-800-432-1000, 8am-8pm ET.
-7. **Decision topology (PS-DT) literature review + research direction** — see companion doc.
+7. **Decision topology (PS-DT) literature review + research direction** — see companion doc. Lit search confirms: gap is wide open. No existing work combines TDA on decision trajectories + Rosen closure + computational irreducibility as biometric. Paper-worthy.
+8. **Aunt's iPhone 13 — potential physical vector** — device at parents' house in Faraday cage (dutch oven + foil). Won't power off, stuck on SOS mode. Aunt was victim of similar crypto impersonation scam ~1 year ago, lost everything, committed. Aaron's attacks began on parents' wifi with this device present. DO NOT discard — potential forensic evidence for FBI. Needs Cellebrite/GrayKey examination. Ask cousin in Reno re: aunt's IC3/police filings. Mention to Detective Gomez + FBI.
 
 ## Open Research Questions
 
