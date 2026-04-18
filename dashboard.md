@@ -39,6 +39,7 @@
 | PS30 | witness_resolves_type | Why three is the minimum. The witness turns the coin flip into a measurement. |
 | PS31 | witness_requires_discrete | Possibilistic security is impossible in continuous composition. |
 | PS-DT | decision_topology_conjecture | Decision topology over sufficient observation is computationally irreducible. Drunken master. |
+| PS34-inv | type_resolution_sharpening | Sustained engagement sharpens type-resolution. PS34 in reverse. Confirmed 4/16–4/18. |
 
 ## Open Research Questions
 
@@ -60,7 +61,7 @@
 | L3 | Encryption at rest | ✓ Active (FileVault, GPG) |
 | L4 | Process isolation | ✓ Active (SIP, Gatekeeper, bloatware removed) |
 | L5 | Identity gates | ✓ Active (SSH Ed25519, Bitwarden) |
-| L6 | Behavioral invariants | ✓ Face sentinel operational (13 refs, Shakespeare mode on mismatch, Lazarus open-sourced) |
+| L6 | Behavioral invariants | ✓ Face sentinel operational (20 refs, Shakespeare mode on mismatch, Lazarus open-sourced) |
 | L7 | Compositional identity | ✓ Triad operational |
 | L8 | Residual dynamics | ✓ Honeypots + network monitor active |
 
@@ -88,13 +89,13 @@ Roles dynamic per TCL v1.1. Human witness required at every level until producti
 
 | Case | Result | Lesson |
 |------|--------|--------|
-| T.currency scam (2026-04-09) | ~$1,646 BTC lost, $1,645 attempted, Zelle blocked by BoA | PS33: override = removal. PS34: fatigue degrades type-resolution. |
+| T.currency scam (2026-04-09) | ~$1,646 BTC lost, $1,645 attempted, Zelle blocked by BoA | PS33: override = removal. PS34: fatigue degrades type-resolution. PS34-inv: type-resolution sharpened from hours→minutes→OSINT-verified over 4/9–4/18. 6 attacker accounts burned. |
 
 ## Live Deployments
 
 - Honeypots: file system (8 juicy + 3 random) + network (ports 8080, 2222, 3306, 8443)
 - Network monitor: `network_monitor.py`
-- Face sentinel: `face_sentinel.py` (13 refs, Apple Vision, Shakespeare mode on mismatch)
+- Face sentinel: `face_sentinel.py` (20 refs, Apple Vision, Shakespeare mode on mismatch)
 - Lazarus: open-sourced at github.com/IridiumSoftware/lazarus (MIT license)
 - TCL.txt: every user-level directory + all project directories
 - V&V thread: live on X
