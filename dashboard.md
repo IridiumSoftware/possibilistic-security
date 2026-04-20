@@ -44,11 +44,11 @@
 ## Action Items
 
 1. **RocketMan honeypotting + deep forensics** — Aaron has additional evidence from original attacker (@RocketMan4798). Feign fragility, lure, collect info, confirm fake, report, mute, block, log. Authorities may find the collected interaction data valuable. Additional WhatsApp evidence from 4/9-4/10 recovered and filed.
-2. **SDI application** — edd.ca.gov/disability. Required to receive pay during LOA.
+2. ~~**SDI application**~~ — DONE. Filed 2026-04-20. Receipt R100000216806455. Email Emily Do to trigger NeuraSignal 40% supplement.
 3. **Remaining filing cascade** — Boston PD, Suffolk County DA, MA AG, LA County DA, CA AG, Grafton callback.
 4. **Microsoft Authenticator → Bitwarden migration** — bring infected phone on guest subnet, transfer TOTP seeds.
 5. **GitHub backup of Research Papers** — harden GitHub first (rotate password, confirm 2FA, check sessions), then push private repo.
-6. **BoA fraud call** — 1-800-432-1000, 8am-8pm ET.
+6. ~~**BoA fraud call**~~ — DONE. Login restored, password rotated via Bitwarden (2026-04-19).
 7. **Decision topology (PS-DT) literature review + research direction** — see companion doc. Lit search confirms: gap is wide open. No existing work combines TDA on decision trajectories + Rosen closure + computational irreducibility as biometric. Paper-worthy.
 8. **Aunt's iPhone 13 — potential physical vector** — device at parents' house in Faraday cage (dutch oven + foil). Won't power off, stuck on SOS mode. Aunt was victim of similar crypto impersonation scam ~1 year ago, lost everything, committed. Aaron's attacks began on parents' wifi with this device present. DO NOT discard — potential forensic evidence for FBI. Needs Cellebrite/GrayKey examination. Ask cousin in Reno re: aunt's IC3/police filings. Mention to Detective Gomez + FBI.
 
@@ -92,7 +92,7 @@ Roles dynamic per TCL v1.1. Human witness required at every level until producti
 |---------|--------|-------|
 | Anthropic | Email v2 ready, not sent | Concrete Mythos/Glasswing framing |
 | Joe Norman | Positive, organic | Redirected to Mt Washington post |
-| Brian Crabtree | Actively engaged | Resynthesizing on X |
+| Brian Crabtree | Strong feedback received | Resynthesizing on X. Follow up on feedback re: Possibilistic Security paper. |
 | Joshua Steinman | Galvanick reframe sent, no reply | Pending |
 | xAI leadership | Escalation logged by Grok | Via T3 internal log |
 
