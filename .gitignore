@@ -8,3 +8,6 @@ logs/
 *.toc
 *.lof
 *.synctex.gz
+
+# Compiled Swift binary — build locally with the swiftc command in face_sentinel.py's error message
+face_compare
