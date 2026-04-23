@@ -60,7 +60,7 @@ SYSTEM_PREFIXES = [
     "::1",              # IPv6 localhost
 ]
 
-LOG_DIR = os.path.expanduser("~/Desktop/Possibilistic_Security/logs")
+LOG_DIR = os.path.expanduser("~/Projects/Possibilistic_Security/logs")
 
 
 def get_connections():
