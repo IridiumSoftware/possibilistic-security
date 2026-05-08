@@ -181,13 +181,19 @@ ABSTRACT
 12. The guarantees claimed rest on the Closure framework being
     correct about cross-sector autopoiesis failure and the
     obstruction-based derivation of the Standard Model. The
-    framework is published (Green 2026, researchers.one) with 151
-    formal spec entries (catlab_spec.jl), nine of which have
-    categorical machine proofs via CatLab.jl, and the remainder
-    computationally verified. Readers skeptical of the physics
-    framework may still read the security argument structurally
-    as a category-theoretic architecture, independent of the
-    physics claims.
+    framework is published (Green 2026, v1.4, IridiumSoftware/
+    closure-forces-structure) with 279 formal spec entries
+    (catlab_spec.jl) -- 162 :proved unconditional, 30 :verified,
+    structurally validated by 72 testsets. Of these, 9 entries
+    carry categorical machine proofs via CatLab.jl; 13 entries
+    carry Lean 4 content (the Q_102 morphogenesis Markov-blanket
+    family S162/S163/S165/S187 added at v193--v200); and 3 entries
+    (S174/S175/S176) carry exact-arithmetic Q-proofs in Julia,
+    with S176 verifying the unification ratio
+    c_3:c_2:c_1 = 6:6:10 and sin^2(theta_W) = 3/8 EXACTLY in Q.
+    Readers skeptical of the physics framework may still read the
+    security argument structurally as a category-theoretic
+    architecture, independent of the physics claims.
 
 13. The paper is technical by design. Aha moments are marked in the
     text (in boldface headers or inline markers) so that readers
@@ -1553,6 +1559,49 @@ ABSTRACT
      specifically. Not because the attack is expensive, but
      because it is categorically impossible.
 
+13.6  Updates since v1.0 publication: morphogenesis at Q_102
+------------------------------------------------------------------------
+
+189a. Since this paper's v1.0 publication (April 2026), the
+      Closure framework's v1.4 release (May 2026) has added a
+      Q_102 morphogenesis programme that machine-verifies the
+      autopoietic structure this paper's security argument
+      rests on. The v1.0 anchor cited Q_51 autopoiesis as
+      computational (S155 -- 0/5202 sampled configurations
+      sustained cross-sector closure). v1.4 adds Lean 4 proofs
+      (S162, S163, S165, S187) showing that the Markov-blanket
+      structure separating internal (autopoietic core) from
+      external (environment) holds at three independent
+      structural levels on Q_102: at the algebra level
+      (order-one axiom acts as Markov blanket, S165), at the
+      Hessian level (the spectral-action Hessian factorises
+      into Friston form, S162/S163), and at the modular-
+      generator level (K_ω is J-equivariant, S187). The
+      Closure paper frames this as "zygote-style emergence in
+      NCG-admissible form."
+
+189b. The implication for this paper's argument is rigor-
+      strengthening but not re-shaping. The v1.0 architecture
+      already treats identity as a sustained autopoietic
+      process and registration as the closure event that
+      enacts (rather than records) legitimacy (Aha #5, §5,
+      §7). The morphogenesis programme provides three
+      independent Lean-verified anchors for the autopoietic
+      structural premise the security argument depends on,
+      replacing what was previously a single computational
+      anchor (S155) with multi-level machine-verified
+      grounding. No new security claim is introduced; the
+      claim "identity is a verb, sustained by closure"
+      gains structural depth at the physics layer.
+
+189c. The architectural stance from §1 is unchanged:
+      readers may still read this paper's security argument
+      structurally as a category-theoretic architecture,
+      independent of whether they accept the Closure
+      framework's physics. The morphogenesis programme is
+      cited here as a depth-of-evidence note, not a load-
+      bearing addition to the security argument.
+
 ========================================================================
 14.  CONCLUSION
 ========================================================================
@@ -1609,7 +1658,7 @@ APPENDIX A.  CATLAB SPEC ENTRIES CITED
 ========================================================================
 
 197. The following scorecard entries from catlab_spec.jl
-     (Green 2026) are directly invoked in this paper:
+     (Green 2026, v1.4) are directly invoked in this paper:
 
      S47   -- Born rule derived structurally (colour-only
                measure μ_cov).
@@ -1627,6 +1676,34 @@ APPENDIX A.  CATLAB SPEC ENTRIES CITED
      S157  -- Cross-sector autopoiesis failure (0/5202).
      G14   -- Sakharov conditions for matter-antimatter
                asymmetry.
+
+     Added in v1.4 (Markov-blanket / Q_102 morphogenesis family,
+     Lean 4 verified at v193--v200; relevant to the obstruction-
+     vs-construction architecture invoked in §§4--7):
+
+     S162  -- Spectral-action Hessian factorises into Friston
+               form at Q_102 (Lean).
+     S163  -- Hessian-level Markov blanket on Q_102 (Lean).
+     S165  -- Order-one axiom acts as Markov blanket at the
+               algebra level on Q_102 (Lean).
+     S187  -- Modular generator K_ω is J-equivariant (Lean);
+               with S162/S163/S165, gives a zygote-style
+               emergence in NCG-admissible form.
+
+     Added in v1.4 (exact-arithmetic algebraic upgrade in Q):
+
+     S174  -- Exact-arithmetic Q-proof of Λ-scale unification
+               ratio prerequisite (Julia Rational{BigInt}).
+     S175  -- Exact-arithmetic Q-proof of Λ-scale unification
+               ratio prerequisite (Julia Rational{BigInt}).
+     S176  -- c_3:c_2:c_1 = 6:6:10 and sin^2(theta_W) = 3/8
+               EXACTLY in Q (algebraic, not floating-point).
+
+     Added in v1.4 (residual external input):
+
+     S215  -- Binary chirality-grading orientation: the only
+               residual external input above NCG, per the
+               obstruction chain's rep-theoretic completeness.
 
 ========================================================================
 APPENDIX B.  SUPPORTING MATERIAL
@@ -1660,14 +1737,21 @@ APPENDIX B.  SUPPORTING MATERIAL
 
      Green, A. (2026). 'Closure Forces Structure: The Standard
      Model from Rosen Closure on Ternary Causal Hypergraphs.'
-     researchers.one, April 2026.
+     v1.4, May 2026. github.com/IridiumSoftware/
+     closure-forces-structure.
 
 200. Formal spec. The Closure framework is backed by a formal
-     specification with 151 scorecard entries -- 130 proved
-     unconditional, 21 computationally verified, and 9 with
-     categorical machine proofs via CatLab.jl. An artifact
-     registry maps every scorecard entry to its proof source,
-     evidence type, and paper status. A regression manifest maps
+     specification with 279 scorecard entries -- 162 proved
+     unconditional, 30 verified, structurally validated by 72
+     testsets. Nine entries carry categorical machine proofs via
+     CatLab.jl; 13 entries carry Lean 4 content (the Q_102
+     morphogenesis Markov-blanket family S162/S163/S165/S187
+     added at v193--v200); 3 entries (S174/S175/S176) carry
+     exact-arithmetic Q-proofs in Julia (Rational{BigInt}, no
+     Float64), with S176 verifying c_3:c_2:c_1 = 6:6:10 and
+     sin^2(theta_W) = 3/8 exactly in Q. An artifact registry
+     maps every scorecard entry to its proof source, evidence
+     type, and paper status. A regression manifest maps
      computational primitives to dependent spec entries with
      pinned outputs. Readers requiring access to these materials
      should contact the author directly with a clear statement of

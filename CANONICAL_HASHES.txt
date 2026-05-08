@@ -1,16 +1,46 @@
 CANONICAL HASHES
 Possibilistic Security Whitepaper + Triadic Closure License
-Aaron Green, April 2026
+Aaron Green, April 2026 (Whitepaper v1.1: May 2026)
 
 ================================================================
 
 Canonical URL:  https://github.com/IridiumSoftware/possibilistic-security
-Current:        TCL v1.3 (2026-04-14, first formally signed) + Whitepaper v1.0
-Previous:       TCL v1.2 (2026-04-09), TCL v1.1 (2026-04-07), TCL v1.0 (2026-04-05) — see git history
+Current:        TCL v1.3 (2026-04-14) + Whitepaper v1.1 (2026-05-08)
+Previous:       Whitepaper v1.0 (2026-04-05); TCL v1.2 (2026-04-09),
+                TCL v1.1 (2026-04-07), TCL v1.0 (2026-04-05) — see git history
 Author:         Aaron Green
 
+Whitepaper v1.1 changes (vs v1.0):
+- References to the Closure framework updated to v1.4 (May 2026,
+  github.com/IridiumSoftware/closure-forces-structure).
+- Spec counts refreshed: 151 entries → 279 (162 :proved, 30 :verified,
+  72 testsets; 9 CatLab + 13 Lean + 3 algebraic-Q proofs).
+- Appendix A scorecard list extended with v1.4 entries: Markov-blanket
+  family (S162/S163/S165/S187), algebraic upgrade (S174/S175/S176, with
+  S176 verifying c_3:c_2:c_1 = 6:6:10 and sin^2(theta_W) = 3/8 EXACTLY
+  in Q), residual external input (S215).
+- New §13.6 acknowledging the Q_102 morphogenesis programme as
+  rigor-strengthening for the autopoietic anchor (S155 → S162/S163/
+  S165/S187 multi-level Lean grounding); explicit framing that no new
+  security claim is introduced.
+- Body text and security argument structure unchanged.
+- TCL v1.3 license section preserved unchanged.
+
 ================================================================
-SHA-256 HASHES (current — TCL v1.3 + Whitepaper v1.0)
+SHA-256 HASHES (current — TCL v1.3 + Whitepaper v1.1)
+================================================================
+
+possibilistic_security_whitepaper.txt
+6758d37cf6969665fd5924188ff4689efb56806d4b9cc640e28aa5e2169b60ae
+
+possibilistic_security_whitepaper.pdf
+c37ecf839c0019474b4c0a0464994e2de31023f7345df2c6ac4f15aa03798986
+
+TCL.txt
+9b3dc175f2168aa53d5051534385566d3b30aa2430a3020e3f8aebec6d0e819c
+
+================================================================
+SHA-256 HASHES (Whitepaper v1.0 + TCL v1.3 — superseded 2026-05-08)
 ================================================================
 
 possibilistic_security_whitepaper.txt
@@ -18,9 +48,6 @@ possibilistic_security_whitepaper.txt
 
 possibilistic_security_whitepaper.pdf
 c8f001787558c604552dc5dbfd891a59493e0dda217f15e9fc16e0d7c4e716ad
-
-TCL.txt
-9b3dc175f2168aa53d5051534385566d3b30aa2430a3020e3f8aebec6d0e819c
 
 ================================================================
 SHA-256 HASHES (TCL v1.2 — historical, see git history)
@@ -56,8 +83,9 @@ To verify a copy you hold matches the canonical version:
     shasum -a 256 possibilistic_security_whitepaper.pdf
     shasum -a 256 TCL.txt
 
-Compare the output against the v1.3 hashes above. A non-matching
-hash means the copy has been altered and is non-canonical.
+Compare the output against the current hashes above (TCL v1.3 +
+Whitepaper v1.1). A non-matching hash means the copy has been
+altered and is non-canonical.
 
 On macOS:  shasum -a 256 <filename>
 On Linux:  sha256sum <filename>
