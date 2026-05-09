@@ -70,6 +70,8 @@
 {\Large Aaron Green\\[0.3em]\normalsize\textit{Independent Researcher, on leave from NeuraSignal}\par}
 \vspace{0.5cm}
 {\large April 2026\par}
+\vspace{0.3em}
+{\normalsize\textit{Updated May 2026 (v1.1, alignment to Closure paper v1.4)}\par}
 \vspace{3cm}
 {\small
 \textbf{License:} Triadic Closure License (TCL).\\
@@ -128,7 +130,7 @@ We develop this architecture from the Closure framework, where the same triadic 
 
 This paper is a structural white paper proposing a successor architecture for identity security. It is not an implementation specification, not a product announcement, and not a claim that the proposed architecture has been deployed or red-teamed.
 
-The guarantees claimed rest on the Closure framework being correct about cross-sector autopoiesis failure and the obstruction-based derivation of the Standard Model. The framework is published~\cite{green2026} with 151 formal spec entries (\texttt{catlab\_spec.jl}), nine of which have categorical machine proofs via CatLab.jl, and the remainder computationally verified. Readers skeptical of the physics framework may still read the security argument structurally as a category-theoretic architecture, independent of the physics claims.
+The guarantees claimed rest on the Closure framework being correct about cross-sector autopoiesis failure and the obstruction-based derivation of the Standard Model. The framework is published~\cite{green2026} (v1.4, May 2026) with 279 formal spec entries (\texttt{catlab\_spec.jl})---162 \texttt{:proved} unconditional, 30 \texttt{:verified}, structurally validated by 72 testsets. Of these, 9 entries carry categorical machine proofs via CatLab.jl; 13 entries carry Lean~4 content (the $Q_{102}$ morphogenesis Markov-blanket family S162/S163/S165/S187 added at framework versions v193--v200); and 3 entries (S174/S175/S176) carry exact-arithmetic $\mathbb{Q}$-proofs in Julia, with S176 verifying the unification ratio $c_3{:}c_2{:}c_1 = 6{:}6{:}10$ and $\sin^2\theta_W = 3/8$ exactly in $\mathbb{Q}$.\footnote{Counting along: $9 + 13 + 3 = 25$ mechanically-verified entries. The architectural argument unfolds across 17 structural sections. The diligent reader will discover a familiar sum.} Readers skeptical of the physics framework may still read the security argument structurally as a category-theoretic architecture, independent of the physics claims.
 
 The paper is technical by design. \emph{Aha moments} are marked in the text so that readers can track the argument's key turns without following every categorical definition.
 
@@ -816,6 +818,14 @@ The paper's claims rest on: (a)~cross-sector autopoiesis failure being categoric
 
 The framework's falsification test: design a red-team protocol that attempts to break a deployed triadic system. The prediction: the adversary will fail at R2 specifically---not because it is expensive, but because it is categorically impossible.
 
+\subsection{Updates since v1.0: morphogenesis at $Q_{102}$ and rigor strengthening}
+
+This paper's v1.0 cited the Closure framework as having 151 formal spec entries with 9 CatLab.jl proofs. Closure paper v1.4 (May 2026) extends the framework to 279 entries spanning 9 CatLab.jl + 13 Lean~4 + 3 exact-arithmetic $\mathbb{Q}$ proofs, with 162 \texttt{:proved}, 30 \texttt{:verified}, and 72 testsets. The Lean track adds the $Q_{102}$ morphogenesis Markov-blanket family (S162/S163/S165/S187) at framework versions v193--v200, plus exact $\mathbb{Q}$-proofs of the unification ratio and Weinberg angle (S174/S175/S176).
+
+The Markov-blanket family does not change the security argument architecture in this paper. It strengthens the rigor of the autopoietic-anchor claim (S155) on which §2.4 cross-sector autopoiesis failure rests: the autopoietic anchor is now grounded by a multi-level Lean chain from individual $Q_{51}$ vertex closure (S162) up to Markov-blanket family stability (S187). The categorical guarantees in this paper now stand on a stronger formal-verification footing than at v1.0 publication, without the security argument requiring revision.
+
+The v1.0 architectural stance is preserved: this paper remains readable as a category-theoretic security architecture independent of physics-framework acceptance. Skeptical readers can engage the security argument structurally; the $Q_{102}$ formalisation strengthens rather than gates the claims.
+
 % ======================================================================
 \section{Conclusion}
 % ======================================================================
@@ -855,6 +865,14 @@ The following scorecard entries from \texttt{catlab\_spec.jl}~\cite{green2026} a
 \item[S153] Coproduct decomposition: $C(Q_{102}) = C(Q_{51}) \sqcup J(C(Q_{51}))$.
 \item[S155] $Q_{51}$ autopoietic (computational).
 \item[S157] Cross-sector autopoiesis failure ($0/5202$).
+\item[S162] $Q_{51}$ vertex closure (Lean-proved, framework v193).
+\item[S163] $Q_{102}$ Markov-blanket layer-1 (Lean-proved, framework v195).
+\item[S165] $Q_{102}$ Markov-blanket layer-2 (Lean-proved, framework v197).
+\item[S187] $Q_{102}$ Markov-blanket family stability (Lean-proved, framework v200).
+\item[S174] Unification ratio $c_3{:}c_2{:}c_1 = 6{:}6{:}10$ (exact-$\mathbb{Q}$, Julia).
+\item[S175] Group-theoretic Weinberg-angle prediction (exact-$\mathbb{Q}$, Julia).
+\item[S176] $\sin^2\theta_W = 3/8$ exactly in $\mathbb{Q}$ (exact-$\mathbb{Q}$, Julia).
+\item[S215] Residual external input: phenomenal-anchor existence assumption.
 \item[G14] Sakharov conditions for matter-antimatter asymmetry.
 \end{description}
 
@@ -892,7 +910,7 @@ A note on priority. The author considers this paper important but not the most i
 
 Harry Crane and Ryan Martin at Researchers.One (\url{https://researchers.one}), who built an academic publication platform on the premise that peer review should be open, post-publication, and community-driven --- researchers reviewing researchers, without gatekeeping by legacy publishers or opaque editorial boards. All of the author's pre-prints will be posted first to Researchers.One going forward. They took a chance on work from outside the institutional gates. This is returning the favor.
 
-Joe Norman and Yaneer Bar-Yam, whose work on multiscale complex systems and the principle that robust structures are \emph{discovered, not designed} runs beneath every obstruction in this paper.
+Joe Norman and Yaneer Bar-Yam, whose work on multiscale complex systems was the author's first exposure to applied complex-systems thinking; their framing runs beneath several of the obstruction arguments in this paper.
 
 A.~H. Louie, for carrying Robert Rosen's work forward with mathematical precision when others let it gather dust. The $(M,R)$-system formalism that grounds this entire architecture exists in its current form because Louie kept the thread alive.
 
@@ -900,7 +918,7 @@ Jamie Lennox, whose PhD dissertation on Rosen closure provided the formal bridge
 
 Dr.\ Muhammad Legenhausen, for sustained engagement on the meta-scale coordination problem --- the question of how ``right meets right'' without annihilation. His willingness to take the structural argument seriously from within a living theological tradition confirmed that the framework's inter-tradition maps are not merely formal.
 
-Sean McClure, for the clarity that comes from refusing to separate mathematics from lived reality.
+Sean McClure, for the principle that robust structures are \emph{discovered, not designed} --- which runs beneath every obstruction in this paper --- and for the clarity that comes from refusing to separate mathematics from lived reality.
 
 Brian Crabtree (\texttt{@ourtown2}), who in my assessment holds frontier-grade understanding of how AI interfaces with reality --- still incomplete, still unvalidated, but pointing in the right direction. More importantly: a source of unwavering emotional support during the period when this paper was being written under fire.
 
@@ -917,8 +935,9 @@ And Joshua Steinman, who still says I am batshit crazy. With love.
 
 \bibitem{green2026}
 Green, A. (2026).
-\textit{Closure Forces Structure: The Standard Model from Rosen Closure on Ternary Causal Hypergraphs.}
-researchers.one.
+\textit{Closure Forces Structure: The Standard Model from Rosen Closure on Ternary Causal Hypergraphs.} v1.4, May 2026.
+\url{https://github.com/IridiumSoftware/closure-forces-structure}.
+(v1.0 originally posted to researchers.one.)
 
 \bibitem{rosen1991}
 Rosen, R. (1991).

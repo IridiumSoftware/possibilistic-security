@@ -1,13 +1,15 @@
 CANONICAL HASHES
-Possibilistic Security Whitepaper + Triadic Closure License
-Aaron Green, April 2026 (Whitepaper v1.1: May 2026)
+Possibilistic Security Paper + Whitepaper + Triadic Closure License
+Aaron Green, April 2026 (Paper v1.1 + Whitepaper v1.1: May 2026)
 
 ================================================================
 
 Canonical URL:  https://github.com/IridiumSoftware/possibilistic-security
-Current:        TCL v1.3 (2026-04-14) + Whitepaper v1.1 (2026-05-08)
-Previous:       Whitepaper v1.0 (2026-04-05); TCL v1.2 (2026-04-09),
-                TCL v1.1 (2026-04-07), TCL v1.0 (2026-04-05) — see git history
+Current:        TCL v1.3 (2026-04-14) + Paper v1.1 (2026-05-09)
+                + Whitepaper v1.1 (2026-05-08)
+Previous:       Paper v1.0 (2026-05-08); Whitepaper v1.0 (2026-04-05);
+                TCL v1.2 (2026-04-09), TCL v1.1 (2026-04-07),
+                TCL v1.0 (2026-04-05) — see git history
 Author:         Aaron Green
 
 Whitepaper v1.1 changes (vs v1.0):
@@ -26,9 +28,40 @@ Whitepaper v1.1 changes (vs v1.0):
 - Body text and security argument structure unchanged.
 - TCL v1.3 license section preserved unchanged.
 
+Paper v1.1 changes (vs v1.0):
+- Title page: date now reads "April 2026 / Updated May 2026 (v1.1,
+  alignment to Closure paper v1.4)".
+- §1.2 ¶12 (intro): citation/count refresh matching Whitepaper v1.1
+  — 151 entries → 279 (162 :proved, 30 :verified, 72 testsets;
+  9 CatLab + 13 Lean + 3 algebraic-Q proofs); explicit S176 callout
+  (c_3:c_2:c_1 = 6:6:10 and sin^2(theta_W) = 3/8 EXACTLY in Q);
+  footnote landing the count-based 42 joke (9+13+3 mechanically-
+  verified entries × 17 structural sections).
+- Appendix A scorecard list extended: Markov-blanket family
+  (S162/S163/S165/S187), algebraic upgrade (S174/S175/S176),
+  residual external input (S215).
+- New §15.6 acknowledging Q_102 morphogenesis programme as rigor-
+  strengthening for autopoietic anchor (S155); explicit framing
+  that no new security claim is introduced.
+- Acknowledgments: "discovered, not designed" attribution corrected
+  from Joe Norman / Yaneer Bar-Yam to Sean McClure; Joe Norman /
+  Yaneer Bar-Yam reframed as Aaron's first exposure to applied
+  complex-systems thinking.
+- Bibliography: green2026 entry refreshed to v1.4 (May 2026,
+  github.com/IridiumSoftware/closure-forces-structure); v1.0 origin
+  at researchers.one preserved parenthetically.
+- Body text and security argument structure unchanged.
+- TCL v1.3 license section preserved unchanged.
+
 ================================================================
-SHA-256 HASHES (current — TCL v1.3 + Whitepaper v1.1)
+SHA-256 HASHES (current — TCL v1.3 + Paper v1.1 + Whitepaper v1.1)
 ================================================================
+
+possibilistic_security_paper.tex
+1642aca1e01caa141006776a67454299a7c541b68ab1f9665af08c41435667e7
+
+possibilistic_security_paper.pdf
+a093807d4d075b867612ab35da8c637aaaa27b4b78c1f953a184bbd3aa684425
 
 possibilistic_security_whitepaper.txt
 6758d37cf6969665fd5924188ff4689efb56806d4b9cc640e28aa5e2169b60ae
@@ -79,13 +112,15 @@ VERIFICATION
 
 To verify a copy you hold matches the canonical version:
 
+    shasum -a 256 possibilistic_security_paper.tex
+    shasum -a 256 possibilistic_security_paper.pdf
     shasum -a 256 possibilistic_security_whitepaper.txt
     shasum -a 256 possibilistic_security_whitepaper.pdf
     shasum -a 256 TCL.txt
 
 Compare the output against the current hashes above (TCL v1.3 +
-Whitepaper v1.1). A non-matching hash means the copy has been
-altered and is non-canonical.
+Paper v1.1 + Whitepaper v1.1). A non-matching hash means the copy
+has been altered and is non-canonical.
 
 On macOS:  shasum -a 256 <filename>
 On Linux:  sha256sum <filename>
