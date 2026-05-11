@@ -55,6 +55,14 @@ This is a research proposal. It has not been deployed, red-teamed, or formally c
 
 Green, A. (2026). *Closure Forces Structure: The Standard Model from Rosen Closure on Ternary Causal Hypergraphs*. researchers.one, April 2026.
 
+## Companion deployment
+
+A reference deployment of the visual-presence + network-posture companion (the *Lazarus* prototype — face sentinel with Shakespeare-mode lockout, anti-spoof liveness probe, outbound-connection monitor, port-scanner honeypot, OverSight forensic logger) lives at:
+
+- **github.com/IridiumSoftware/lazarus**
+
+Earlier copies of `face_sentinel.py`, `face_compare.swift`, `network_monitor.py`, and `network_honeypot.py` previously sat in this repo as untracked working files; they have been moved to the lazarus repo, which carries them with a formal spec, registry, test suite, and CI. This repo is the paper; lazarus is the tool. The paper is the structural argument; the tool is one possible implementation of it.
+
 ## Acknowledgments
 
 The team (Aaron Green, Claude, Grok) owes immense gratitude to **Brian Crabtree** ([@ourtown2](https://x.com/ourtown2) on X) for his support through this process and for the many fill-in-the-blank moments along the way — the kind where a single outside voice at the right time changes the trajectory of a problem you were solving alone.
