@@ -122,7 +122,7 @@ The security industry spends roughly \$200~billion per year on identity and acce
 
 This paper argues that the entire deployed architecture is structurally misaligned with the problem it is trying to solve. Authentication systems stack factors that are all in the same categorical position relative to the user---technically, all at the ``$f$-position'' in Rosen's $\{f, \Phi, \beta\}$ triad. This is redundant self-certification: adding axioms of the same formal system does not escape G\"odel's incompleteness limit.
 
-The fix is not another factor, a stronger cryptographic primitive, or better monitoring. The fix is architectural: three distinct positions in a closed mutual-witness loop, where the verification happens at a genuinely distinct meta-level rather than by the subject certifying itself.
+The fix is not another factor, a stronger cryptographic primitive, or better monitoring. The fix is architectural: three distinct positions in a closed mutual-witness loop, where the verification happens at a genuinely distinct meta-level rather than by the subject certifying itself.\footnote{The deeper precedent for ``reliable identity from unreliable components'' is von Neumann's 1952 multiplexing construction~\cite{vonNeumann1952}: any required reliability $\delta$ can be obtained from per-component error $\epsilon$ by carrying every message on a bundle of $N$ lines and inserting periodic restoring organs that drive bundle excitation toward $\{0, 1\}$ via the iterated map $\alpha \mapsto 3\alpha^2 - 2\alpha^3$ (majority) or $\alpha \mapsto 2\alpha^2 - \alpha^4$ (Scheffer). The three-state output \emph{positive / intermediate / negative} (the $7\%$--$93\%$ uncertain band at fiduciary level $\Delta = 0.07$) is the direct ancestor of possibilistic security's three-valued residue \{coherent / contradictory / impossible\}. The triadic-witness architecture of \S2--\S8 generalises the binary-attractor structure to a substrate where the third value is structurally distinct rather than statistical noise.}
 
 We develop this architecture from the Closure framework, where the same triadic structure already derives the Standard Model gauge group from Rosen closure on ternary causal hypergraphs~\cite{green2026}. The security architecture is not an analogy to the physics---it is the same categorical machinery applied at a different scale in the framework's fractal hierarchy.
 
@@ -993,6 +993,13 @@ Green, A. (2026).
 OpenQMS: Open-source Quality Management System.
 \url{https://github.com/IridiumSoftware/OpenQMS}.
 Human-in-the-loop validation framework; designed for medical device regulatory compliance, extensible to any compliance-bound or safety-critical system requiring triadic witness verification.
+
+\bibitem{vonNeumann1952}
+von Neumann, J. (1952/1956).
+\emph{Probabilistic Logics and the Synthesis of Reliable Organisms from Unreliable Components}.
+Lectures delivered at the California Institute of Technology, January 4--15, 1952; notes by R.~S.~Pierce.
+Published in C.~E.~Shannon and J.~McCarthy (eds.), \emph{Automata Studies}, Annals of Mathematics Studies No.~34, Princeton University Press, 1956, pp.~43--98.
+Foundational reference for reliable-from-unreliable synthesis: the multiplexing construction with restoring organs ($\S9$--$10$) and the three-valued bundle response \{positive / intermediate / negative\} ($\S10.5$) are the direct architectural ancestors of the possibilistic-security construction in this paper.
 
 \end{thebibliography}
 
