@@ -92,7 +92,7 @@ Contemporary identity security is architecturally sub-triadic and therefore G\"o
 
 The proposal rests on four structural results imported from the Closure framework: (i)~Rosen closure to efficient causation requires a triadic component structure $\{f, \Phi, \beta\}$ with three being the minimum closure number; (ii)~cross-sector autopoiesis fails between charge-conjugate sectors of the $Q_{51}/Q_{102}$ quotient structure ($0/5202$ computational, spec entries S155/S157); (iii)~$\gamma$-orthogonality $\mathrm{Tr}(L \cdot D_F) = 0$ separates the compositional core from the attack surface (S82/S125); (iv)~the framework operates by obstruction, with information identified as the negative space of possibility carved away by structural ``no''s.
 
-The resulting security guarantees are categorical rather than computational. An adversary attempting to breach a triadic closure must co-close in the charge-conjugate sector---structurally impossible---rather than solve a hard problem. The guarantees are therefore \emph{quantum-irrelevant}, not merely quantum-resistant: adding compute does not help the adversary, because the obstruction is not computational.
+The resulting security guarantees are categorical rather than computational. An adversary attempting to breach a triadic closure must co-close in the charge-conjugate sector---structurally impossible at the closure layer (deployment-boundary attacks, where the adversary subverts a triad position rather than breaking the closure, are treated separately in \S\ref{sec:attacks})---rather than solve a hard problem. The guarantees are therefore \emph{quantum-irrelevant}, not merely quantum-resistant: adding compute does not help the adversary, because the obstruction is not computational.
 
 We identify post-quantum cryptography (PQC) as the architectural orphan in the current security stack: the only primitive that does not rest on closure. We provide a formal obstruction chain for identity (L0--L8), a structural critique of MFA/2FA, PQC, and perimeter defense, four guarantees PQC cannot deliver, an attack-feasibility analysis, a working prototype (Lazarus), a live case study, and policy implications for AI systems, critical infrastructure, and standards bodies.
 
@@ -210,7 +210,7 @@ where $L$ is the compositional core (the part of $D$ that respects $\gamma$-grad
 \label{fig:gamma_orthogonality}
 \end{figure}
 
-\aha{4}{The attack surface is structurally separate from the closure.} $D_F$ is where the legitimate user couples to the adversary (in security). Credentials, tokens, biometrics, API surfaces, prompts, tool permissions---all live in $D_F$. The compositional core---what the identity IS---lives in $L$. $\gamma$-orthogonality says these are orthogonal: you can attack the credentials all day; you cannot attack the closure through them.
+\aha{4}{The attack surface is structurally separate from the closure.} $D_F$ is where the legitimate user couples to the adversary (in security). Credentials, tokens, biometrics, API surfaces, prompts, tool permissions---all live in $D_F$. The compositional core---what the identity IS---lives in $L$. $\gamma$-orthogonality says these are orthogonal: you can attack the credentials all day; you cannot \emph{bootstrap the closure} through them. \textbf{Scope:} this defends against reconstructing identity from stolen artifacts on a foreign substrate; it does not, by itself, defend a live session already running on the genuine substrate---an attacker who hijacks an authenticated session is, by construction, riding the real $L$, and is caught not by $\gamma$-orthogonality but by continuous-presence verification at a distinct triad position (\S\ref{sec:attacks}).
 
 \subsection{Chirality equivalence and orientation}
 
@@ -243,6 +243,8 @@ Possibilistic identity treats identity as a sustained process: the trajectory of
 \subsection{Categorical morphisms and the attack surface}
 
 In $\mathbf{I}$, the attack surface is the set of morphisms that can be invoked by an adversary---precisely the morphisms through $D_F$. $\gamma$-orthogonality says the compositional core morphisms are orthogonal to $D_F$. An adversary invoking $D_F$ morphisms cannot reach the closure by composition.
+
+\medskip\noindent\textbf{$L$ must be observable, or it is unfalsifiable residue.} A fair objection: if the compositional core $L$ does security work, some measurable quantity must track it, or the orthogonality claim is metaphysics. We offer a concrete candidate bridge. In a deployment, a device's sustained chaotic trajectory and its spectral (Lyapunov) residue audit give a finite, reproducible characterization of the closure's behavior: a registered envelope $(\mu, \sigma)$, a measured residue $r_i = |\lambda_i - \mu_i|$, and an accept test $r_i < k\,\sigma_i$ for all $i$ that stands in for ``is the process still closing on $L$?'' This is an \emph{attempted, evidence-tiered} bridge---argued, not proved to \emph{be} $L$---bounded by measurement resolution ($S_\text{production} > S_\text{measurement}$) and falsifiable in principle: an adversary who reaches ACCEPT while genuinely off-$L$ would refute it. The claim is that $L$ is approachable by measurement, not that it is a closed-form observable.
 
 This has a precise architectural consequence: \textbf{no quantity of authentication factors in $D_F$ yields access to the closure in $L$.} The security is not ``more factors'' but ``factors in $L$,'' which requires triadic witness structure rather than stacked credentials.
 
@@ -352,23 +354,25 @@ G\"odel's first incompleteness theorem: any sufficiently expressive consistent f
 
 Applied to identity: an individual identity $I$ cannot verify its own legitimacy from inside itself.
 
-\aha{9}{No self-certification scheme escapes G\"odel.} Every credential an individual holds is a self-axiom; every factor in MFA is a self-axiom. Stacking self-axioms does not escape the G\"odel limit---it produces a richer G\"odel-limited system. You escape by stepping to a distinct meta-level, which requires an external verifier. A single external verifier introduces infinite regress: who verifies the verifier?
+\aha{9}{No self-certifying scheme can close its own verification regress.} Every credential an individual holds is a self-axiom; every factor in MFA is a self-axiom. Stacking self-axioms does not break the regress---it produces a richer self-referential system that still cannot certify its own consistency from inside. You break it by stepping to a distinct meta-level, which requires an external verifier. A single external verifier introduces infinite regress: who verifies the verifier? (We invoke G\"odel's first incompleteness theorem as a structural \emph{analogy} for this reflexivity barrier, not as a literal theorem about authentication protocols; the load-bearing claim is the verification regress, not the metamathematics---see the overdetermination remark below.)
 
 \subsection{Triadic incompleteness escape}
 
 \begin{claim}
-A triad of entities, each with G\"odel-limited self-verification, can collectively escape the incompleteness barrier if each serves as a meta-system for the others in a closed verification loop.
+A triad of entities, each unable to certify itself from inside, can collectively close the verification (reflexivity) regress if each serves as a meta-system for the others in a closed verification loop.
 \end{claim}
 
 In the triad $\{A, B, C\}$ with verification morphisms $A \to B$, $B \to C$, $C \to A$: $B$ is meta to $A$, $C$ is meta to $B$, $A$ is meta to $C$. The loop closes. Every G\"odel-sentence of one member is provable within the triad.
 
-\aha{10}{Three verifiers in a loop escape G\"odel; fewer do not.} A pair stares at each other with symmetric limits. A single external verifier starts infinite regress. Three in a closed loop close the regress without requiring external meta-systems.
+\aha{10}{Three verifiers in a closed loop close the regress; fewer do not.} A pair stares at each other with symmetric limits. A single external verifier starts infinite regress. Three in a closed loop close the regress without requiring an external meta-system tower. This closes the \emph{verification regress}; it does not refute or evade G\"odel's theorem, which continues to hold of each member's own formal system.
 
 This is the same closure structure as Rosen closure, applied to verification rather than efficient causation:
 \begin{align}
 \text{Rosen closure} &= \text{mutual production } (f, \Phi, \beta) \\
-\text{Triadic incompleteness escape} &= \text{mutual verification } (A, B, C)
+\text{Triadic verification closure} &= \text{mutual verification } (A, B, C)
 \end{align}
+
+\medskip\noindent\textbf{Overdetermination remark.} The security conclusion does not depend on the G\"odel analogy being load-bearing. Even if one rejects the incompleteness framing entirely, the argument stands on closure-triadicity alone: a self-certifying system cannot witness its own closure from inside (a reflexivity fact, not a metamathematical one), and three is the minimum arity at which mutual external witness closes without an infinite meta-tower (the rule-of-three floor, next). The G\"odel theorem is cited as an illustrative analogy for the reflexivity barrier; the load-bearing premises are the reflexivity limit and the minimum-closure-arity result, both independent of it.
 
 \subsection{The rule of three as the floor of closure}
 
@@ -571,6 +575,7 @@ No deployed PQC + identity stack names phenomenal anchoring as a requirement. As
 
 % ======================================================================
 \section{Attack Analysis}
+\label{sec:attacks}
 % ======================================================================
 
 \subsection{What would a successful attack require?}
@@ -816,7 +821,7 @@ The paper's claims rest on: (a)~cross-sector autopoiesis failure being categoric
 
 \subsection{The red-team protocol}
 
-The framework's falsification test: design a red-team protocol that attempts to break a deployed triadic system. The prediction: the adversary will fail at R2 specifically---not because it is expensive, but because it is categorically impossible.
+The framework's falsification test: design a red-team protocol that attempts to break a deployed triadic system. The prediction: the adversary will fail at R2 specifically---not because it is expensive, but because it is categorically impossible at the closure layer (deployment-boundary attacks remain a separate, open surface; \S\ref{sec:attacks}).
 
 \subsection{Updates since v1.0: morphogenesis at $Q_{102}$ and rigor strengthening}
 

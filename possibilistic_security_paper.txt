@@ -60,7 +60,10 @@ ABSTRACT
 3.  The resulting security guarantees are categorical rather than
     computational. An adversary attempting to breach a triadic closure
     must co-close in the charge-conjugate sector -- structurally
-    impossible -- rather than solve a hard problem. The guarantees
+    impossible at the closure layer (deployment-boundary attacks, where
+    the adversary subverts a triad position rather than breaking the
+    closure, are treated separately in Section 10) -- rather than solve
+    a hard problem. The guarantees
     are therefore quantum-irrelevant, not merely quantum-resistant:
     adding compute does not help the adversary, because the obstruction
     is not computational. Harvest-now-decrypt-later is categorically
@@ -415,7 +418,14 @@ LIST OF FIGURES
     core -- what the identity IS -- lives in L. gamma-orthogonality
     says these are orthogonal: the attack surface cannot reach the
     core through D_F alone. You can attack the credentials all day;
-    you cannot attack the closure through them.
+    you cannot *bootstrap the closure* through them. Scope: this
+    defends against reconstructing identity from stolen artifacts on
+    a foreign substrate. It does not, by itself, defend a live
+    session already running on the genuine substrate -- an attacker
+    who hijacks an authenticated session is, by construction, riding
+    the real L, and is caught not by gamma-orthogonality but by
+    continuous-presence verification at a distinct triad position
+    (Section 10.2 / 10.3).
 
 2.6  Chirality equivalence and orientation
 ------------------------------------------------------------------------
@@ -504,6 +514,23 @@ LIST OF FIGURES
     the ones that constitute the identity's closure -- are
     orthogonal to D_F. An adversary invoking D_F morphisms cannot
     reach the closure by composition.
+
+60a. **L must be observable, or it is unfalsifiable residue.** A
+    fair objection: if the compositional core L does security work,
+    some measurable quantity must track it, or the orthogonality
+    claim is metaphysics. We offer a concrete candidate bridge. In a
+    deployment, a device's sustained chaotic trajectory and its
+    spectral (Lyapunov) residue audit give a finite, reproducible
+    characterization of the closure's behavior: a registered envelope
+    (mu, sigma), a measured residue r_i = |lambda_i - mu_i|, and an
+    accept test r_i < k*sigma_i for all i that stands in for "is the
+    process still closing on L?" This is an *attempted,
+    evidence-tiered* bridge -- argued, not proved to BE L -- bounded
+    by measurement resolution (S_production > S_measurement) and
+    falsifiable in principle: an adversary who reaches ACCEPT while
+    genuinely off-L would refute it. The claim is that L is
+    approachable by measurement, not that it is a closed-form
+    observable.
 
 61. This has a precise architectural consequence: **no quantity
     of authentication factors in D_F yields access to the closure
@@ -772,12 +799,17 @@ LIST OF FIGURES
     consistency. There exist identity-truths about I that I
     cannot derive from its own state.
 
-80. **Aha #9: no self-certification scheme escapes Godel.** Every
-    credential an individual holds is a self-axiom; every factor
-    in MFA is a self-axiom. Stacking self-axioms does not escape
-    the Godel limit -- it produces a richer Godel-limited system.
-    You escape by stepping to a distinct meta-level, which
-    requires an external verifier.
+80. **Aha #9: no self-certifying scheme can close its own
+    verification regress.** Every credential an individual holds is
+    a self-axiom; every factor in MFA is a self-axiom. Stacking
+    self-axioms does not break the regress -- it produces a richer
+    self-referential system that still cannot certify its own
+    consistency from inside. You break it by stepping to a distinct
+    meta-level, which requires an external verifier. (We invoke
+    Godel's first incompleteness theorem as a structural *analogy*
+    for this reflexivity barrier, not as a literal theorem about
+    authentication protocols; the load-bearing claim is the
+    verification regress, not the metamathematics -- see para 85a.)
 
 81. A single external verifier introduces infinite regress: who
     verifies the verifier? The regress must close somewhere, and
@@ -786,9 +818,9 @@ LIST OF FIGURES
 5.2  Triadic incompleteness escape
 ------------------------------------------------------------------------
 
-82. Claim: a triad of entities, each with Godel-limited self-
-    verification, can collectively escape the incompleteness
-    barrier if each serves as a meta-system for the others in a
+82. Claim: a triad of entities, each unable to certify itself from
+    inside, can collectively close the verification (reflexivity)
+    regress if each serves as a meta-system for the others in a
     closed verification loop.
 
 83. Argument: In the triad {A, B, C} with verification morphisms
@@ -802,19 +834,34 @@ LIST OF FIGURES
     The loop closes. Every Godel-sentence of one member is
     provable within the triad.
 
-84. **Aha #10: three verifiers in a loop escape Godel; fewer do
-    not.** A pair stares at each other with symmetric limits. A
-    single external verifier starts an infinite regress. Three
-    in a closed loop close the regress without requiring external
-    meta-systems.
+84. **Aha #10: three verifiers in a closed loop close the regress;
+    fewer do not.** A pair stares at each other with symmetric
+    limits. A single external verifier starts an infinite regress.
+    Three in a closed loop close the regress without requiring an
+    external meta-system tower. (This closes the *verification
+    regress*; it does not refute or evade Godel's theorem, which
+    continues to hold of each member's own formal system.)
 
 85. This is the same closure structure as Rosen closure, applied
     to verification rather than efficient causation:
         Rosen closure = mutual production (f, Phi, beta)
-        Triadic incompleteness escape = mutual verification (A, B, C)
+        Triadic verification closure = mutual verification (A, B, C)
     Same categorical pattern, different layer. A Rosen-closed
-    triad automatically escapes incompleteness with respect to
-    mutual verification.
+    triad resolves the verification regress with respect to mutual
+    verification -- it closes the reflexivity loop, rather than
+    escaping a formal incompleteness theorem.
+
+85a. **Overdetermination remark.** The security conclusion does not
+    depend on the Godel analogy being load-bearing. Even if one
+    rejects the incompleteness framing entirely, the argument stands
+    on closure-triadicity alone: a self-certifying system cannot
+    witness its own closure from inside (a reflexivity fact, not a
+    metamathematical one), and three is the minimum arity at which
+    mutual external witness closes without an infinite meta-tower
+    (Section 5.3). The Godel theorem is cited as an illustrative
+    analogy for the reflexivity barrier; the load-bearing premises
+    are the reflexivity limit and the minimum-closure-arity result,
+    both independent of it.
 
 5.3  The rule of three as the floor of closure
 ------------------------------------------------------------------------
@@ -1149,7 +1196,7 @@ LIST OF FIGURES
 119. The loop is Rosen-closed at the verification layer (Section
      5.2). Breaking verification requires breaking the closure,
      which (per Section 2.4) requires cross-sector co-closure,
-     which is categorically impossible.
+     which is categorically impossible at the closure layer.
 
 7.4  The sustained-closure requirement
 ------------------------------------------------------------------------
@@ -1311,7 +1358,7 @@ LIST OF FIGURES
      identity is not those credentials; the identity is the
      ongoing closure that produced those credentials. Going
      forward, the adversary must BE the closure, which (per
-     Section 2.4) is categorically impossible.
+     Section 2.4) is categorically impossible at the closure layer.
 
 141. **Aha #16: harvest-now-decrypt-later is category-confused.**
      It is an attack on static objects. Identity-as-process has
@@ -2087,7 +2134,9 @@ LIST OF FIGURES
 
 213. The prediction: the adversary will fail at R2 (Section
      10.1) specifically. Not because the attack is expensive,
-     but because it is categorically impossible.
+     but because it is categorically impossible at the closure
+     layer (deployment-boundary attacks remain a separate, open
+     surface; Section 10.2).
 
 ========================================================================
 17.  CONCLUSION

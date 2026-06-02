@@ -102,8 +102,12 @@ ABSTRACT
 3.  The resulting security guarantees are categorical rather than
     computational. An adversary attempting to breach a triadic closure
     must co-close in the charge-conjugate sector -- structurally
-    impossible -- rather than solve a hard problem. The guarantees
-    are therefore quantum-irrelevant, not merely quantum-resistant:
+    impossible *at the closure layer* -- rather than solve a hard
+    problem. (Deployment boundaries remain conditionally vulnerable;
+    see Sections 10.2-10.3 -- the guarantee is categorical for the
+    closure itself, not for the components that instantiate it.) The
+    guarantees are therefore quantum-irrelevant, not merely
+    quantum-resistant:
     adding compute does not help the adversary, because the obstruction
     is not computational. Harvest-now-decrypt-later is categorically
     inapplicable, because identity is a sustained process and not a
@@ -394,7 +398,16 @@ ABSTRACT
     core -- what the identity IS -- lives in L. γ-orthogonality
     says these are orthogonal: the attack surface cannot reach the
     core through D_F alone. You can attack the credentials all day;
-    you cannot attack the closure through them.
+    you cannot *bootstrap the closure* through them. **Scope
+    (important):** this defends against reconstructing identity from
+    stolen artifacts on a foreign substrate. It does *not* by itself
+    defend a live session already running on the genuine substrate
+    -- an attacker who hijacks an authenticated session is, by
+    construction, riding the real L, and is caught not by
+    γ-orthogonality but by continuous-presence verification at a
+    distinct triad position (the deployment division of labor:
+    substrate confirms the device, a live-presence node confirms the
+    human).
 
 2.6  Chirality equivalence and orientation
 ------------------------------------------------------------------------
@@ -483,6 +496,24 @@ ABSTRACT
     ones that constitute the identity's closure -- are orthogonal
     to D_F. An adversary invoking D_F morphisms cannot reach the
     closure by composition.
+
+58a. **L must be observable, or it is unfalsifiable residue.** A
+    fair engineering objection: if the compositional core L is to do
+    security work, some measurable quantity must track it, or the
+    orthogonality claim is metaphysics. We answer with a concrete
+    candidate bridge: the device's sustained chaotic trajectory and
+    its Lyapunov-spectrum residue audit (LavaLamp specification
+    entries LL-006 / LL-051). The registered envelope (μ, σ) is a
+    finite, reproducible characterization of the closure's behavior;
+    the residue rᵢ = |λᵢ − μᵢ| is a measured distance from it; the
+    accept test rᵢ < k·σᵢ for all i is the operational stand-in for
+    "is the process still closing on L?" This is offered as an
+    *attempted, evidence-tiered* bridge (specification status
+    `:argued`, not proved to *be* L), bounded by resolution
+    (S_production > S_measurement), and falsifiable in principle: an
+    adversary who reaches ACCEPT while genuinely off-L would refute
+    it. The claim is that L is *approachable by measurement*, not
+    that it is a closed-form observable.
 
 59. This has a precise architectural consequence: **no quantity
     of authentication factors in D_F yields access to the closure
@@ -613,12 +644,18 @@ ABSTRACT
     consistency. There exist identity-truths about I that I
     cannot derive from its own state.
 
-78. **Aha #9: no self-certification scheme escapes Gödel.** Every
-    credential an individual holds is a self-axiom; every factor
-    in MFA is a self-axiom. Stacking self-axioms does not escape
-    the Gödel limit -- it produces a richer Gödel-limited system.
-    You escape by stepping to a distinct meta-level, which
-    requires an external verifier.
+78. **Aha #9: no self-certification scheme escapes its own
+    reflexivity limit.** Every credential an individual holds is a
+    self-axiom; every factor in MFA is a self-axiom. Stacking
+    self-axioms does not produce an independent ground of
+    verification -- it produces a richer self-referential system
+    with the same reflexivity limit. We invoke Gödel's
+    incompleteness as a structural analogy for this reflexivity
+    limit, not as a literal theorem: identity verification is not
+    here formalized as a recursively-enumerable proof system, and
+    the load-bearing claim does not depend on that formalization
+    (see para 82a). You escape the limit by stepping to a distinct
+    meta-level, which requires an external verifier.
 
 79. A single external verifier introduces infinite regress: who
     verifies the verifier? The regress must close somewhere, and
@@ -643,19 +680,36 @@ ABSTRACT
     The loop closes. Every Gödel-sentence of one member is
     provable within the triad.
 
-82. **Aha #10: three verifiers in a loop escape Gödel; fewer do
-    not.** A pair stares at each other with symmetric limits. A
-    single external verifier starts an infinite regress. Three
-    in a closed loop close the regress without requiring external
-    meta-systems.
+82. **Aha #10: three verifiers in a loop close the reflexivity
+    regress; fewer do not.** A pair stares at each other with
+    symmetric limits. A single external verifier starts an infinite
+    regress. Three in a closed loop close the regress without
+    requiring external meta-systems.
+
+82a. **The conclusion is overdetermined -- it does not rest on
+    Gödel.** Even granting only the weak, register-safe form
+    ("self-verification suffers a reflexivity limit analogous to
+    incompleteness"), the operative result stands on an independent
+    leg: closure-triadicity. A single entity verifying itself --
+    however many factors it stacks -- has no vantage point external
+    to itself from which the verification is grounded; a pair can
+    only defer to each other (symmetric, no independent ground);
+    three in a closed loop is the minimum that yields a
+    non-self-referential verification. This is an argument about
+    *independent ground*, not about provability, and it entails
+    "MFA is sub-triadic" with or without the Gödel mapping. The
+    incompleteness framing is illustrative; the closure-arity
+    argument is load-bearing.
 
 83. This is the same closure structure as Rosen closure, applied
     to verification rather than efficient causation:
         Rosen closure = mutual production (f, Φ, β)
-        Triadic incompleteness escape = mutual verification (A, B, C)
+        Triadic reflexivity escape = mutual verification (A, B, C)
     Same categorical pattern, different layer. A Rosen-closed
-    triad automatically escapes incompleteness with respect to mutual
-    verification.
+    triad resolves the reflexivity regress with respect to mutual
+    verification -- closing the "who verifies the verifier" tower
+    into a loop rather than escaping a formal incompleteness
+    theorem.
 
 5.3  The rule of three as the floor of closure
 ------------------------------------------------------------------------
@@ -972,7 +1026,8 @@ ABSTRACT
 117. The loop is Rosen-closed at the verification layer (§5.2).
      Breaking verification requires breaking the closure, which
      (per §2.4) requires cross-sector co-closure, which is
-     categorically impossible.
+     categorically impossible *at the closure layer*
+     (deployment-boundary attacks are treated separately in §10.3).
 
 7.4  The sustained-closure requirement
 ------------------------------------------------------------------------
@@ -1119,7 +1174,7 @@ ABSTRACT
      identity is not those credentials; the identity is the
      ongoing closure that produced those credentials. Going
      forward, the adversary must BE the closure, which (per
-     §2.4) is categorically impossible.
+     §2.4) is categorically impossible *at the closure layer*.
 
 139. **Aha #16: harvest-now-decrypt-later is category-confused.**
      It is an attack on static objects. Identity-as-process has
@@ -1223,8 +1278,14 @@ ABSTRACT
 ------------------------------------------------------------------------
 
 153. Under the framework's structural assumptions, a successful
-     attack is categorically impossible at the closure layer.
-     R2 rules it out.
+     attack is **categorically blocked at the closure layer and
+     conditionally vulnerable at deployment boundaries.** R2 rules
+     out the closure-layer attack; the deployment-boundary
+     vulnerabilities are enumerated and owned in §10.3 (para
+     158-159). This two-register phrasing -- blocked-at-layer,
+     vulnerable-at-boundary -- is the scientifically precise
+     statement of the guarantee, and is preferred over the
+     unqualified "impossible" wherever the latter appears.
 
 154. The framework's assumptions can be challenged:
      (a) Is cross-sector autopoiesis failure real at scale? The
@@ -1284,6 +1345,30 @@ ABSTRACT
      Deployment discipline applies to keeping the closure's
      components intact. Both are required for real-world
      security.
+
+159a. **Trust-independence is a first-class deployment requirement,
+     not a footnote.** Closure is necessary but not sufficient for
+     security: a triad can be Rosen-closed, mutually witnessing, and
+     internally coherent while still being a *single compromise
+     domain* -- three positions owned by one adversary (one cloud
+     admin, one root account, one key custodian) is a closed triad
+     with no independent trust boundary. The counterfeit-triad
+     failure (companion paper §13.2: "a fake triad that feels like
+     closure from inside") is the concrete instance. We therefore
+     state, in security-engineering terms: **a deployed triad is
+     secure only to the degree its three positions are independent
+     compromise domains** (fault isolation). The genuine-Φ-witness
+     conditions of §5.5 (externality, closure-dependence,
+     witness-morphism) are the *categorical* form of this
+     requirement; its *operational* form is domain separation --
+     distinct silicon, OS, custody, and a live human at one node.
+     The Triad Deployments instantiate this as three deliberately
+     distinct domains (substrate / OS / runtime+human); on a single
+     host those domains are co-located and a root adversary defeats
+     all three at once, so genuine trust-independence is a
+     multi-host / multi-custody property. This requirement is
+     recorded as a cross-deployment specification backbone (LavaLamp
+     LL-052, PharOS PH-021, Lazarus LZ-033).
 
 10.4  Defense-in-depth reinterpreted
 ------------------------------------------------------------------------
@@ -1557,7 +1642,8 @@ ABSTRACT
 
 189. The prediction: the adversary will fail at R2 (§10.1)
      specifically. Not because the attack is expensive, but
-     because it is categorically impossible.
+     because it is categorically impossible *at the closure layer*
+     (the deployment-boundary caveats of §10.3 still apply).
 
 13.6  Updates since v1.0 publication: morphogenesis at Q_102
 ------------------------------------------------------------------------
