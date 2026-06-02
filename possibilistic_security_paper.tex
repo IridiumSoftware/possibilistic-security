@@ -71,7 +71,7 @@
 \vspace{0.5cm}
 {\large April 2026\par}
 \vspace{0.3em}
-{\normalsize\textit{Updated May 2026 (v1.1, alignment to Closure paper v1.4)}\par}
+{\normalsize\textit{Updated June 2026 (v1.2, edge-witness revisions; aligned to Closure paper v1.4)}\par}
 \vspace{3cm}
 {\small
 \textbf{License:} Triadic Closure License (TCL).\\
@@ -830,6 +830,10 @@ This paper's v1.0 cited the Closure framework as having 151 formal spec entries 
 The Markov-blanket family does not change the security argument architecture in this paper. It strengthens the rigor of the autopoietic-anchor claim (S155) on which §2.4 cross-sector autopoiesis failure rests: the autopoietic anchor is now grounded by a multi-level Lean chain from individual $Q_{51}$ vertex closure (S162) up to Markov-blanket family stability (S187). The categorical guarantees in this paper now stand on a stronger formal-verification footing than at v1.0 publication, without the security argument requiring revision.
 
 The v1.0 architectural stance is preserved: this paper remains readable as a category-theoretic security architecture independent of physics-framework acceptance. Skeptical readers can engage the security argument structurally; the $Q_{102}$ formalisation strengthens rather than gates the claims.
+
+\subsection{Updates in v1.2: edge-witness revisions}
+
+A triadic edge-witness review (June 2026) prompted four precision revisions, none of which alter the security architecture. (1) The G\"odel framing is softened to a reflexivity-regress claim: the triad closes a verification (reflexivity) regress rather than ``escaping'' G\"odel's theorem, which is now cited only as an analogy, with an overdetermination remark making the conclusion rest on closure-triadicity and minimum closure-arity rather than the metamathematics. (2) Attack/breach impossibility claims are qualified ``at the closure layer,'' with deployment-boundary attacks (\S\ref{sec:attacks}) called out as a separate surface; pure-mathematical impossibility claims are left unqualified. (3) Trust-independence is stated as a first-class fault-isolation requirement: a closed triad is secure only insofar as its three positions are independent compromise domains. (4) Two scope/observability notes are added---$\gamma$-orthogonality blocks bootstrapping a closure from stolen artifacts but not a live hijacked session (caught by continuous-presence verification), and the Lyapunov residue audit is named as an attempted, evidence-tiered, falsifiable bridge making the compositional core $L$ measurable. The paper's earlier von Neumann (1952) self-reproducing-automata citation is retained. These are clarifications of scope and claim-strength, not new security claims.
 
 % ======================================================================
 \section{Conclusion}

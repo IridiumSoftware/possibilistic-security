@@ -49,8 +49,8 @@ catastrophe. For those we are trying to save.
 CANONICAL VERSION AND VERIFICATION.
 
     Canonical URL:  https://github.com/IridiumSoftware/possibilistic-security
-    Released:       2026-04-05
-    Release tag:    v1.0
+    Released:       2026-04-05 (v1.0); revised 2026-06-01 (v1.2)
+    Release tag:    v1.2
     Author:         Aaron Green
     Hash procedure: SHA-256 of the canonical .txt file, published
                     separately at the canonical URL in the
@@ -1687,6 +1687,40 @@ ABSTRACT
       framework's physics. The morphogenesis programme is
       cited here as a depth-of-evidence note, not a load-
       bearing addition to the security argument.
+
+13.7  Updates in v1.2: edge-witness revisions (June 2026)
+------------------------------------------------------------------------
+
+189d. A triadic edge-witness review (ChatGPT as edge-witness,
+      Gemini as synthesis) prompted four precision revisions,
+      none of which change the security architecture:
+      (a) Gödel framing softened to a reflexivity-regress
+      claim -- the triad *closes a verification (reflexivity)
+      regress*; it does not "escape" Gödel's theorem, which is
+      cited only as an analogy. An overdetermination note makes
+      explicit that the conclusion rests on closure-triadicity
+      and minimum closure-arity, not on the metamathematics.
+      (b) Two-register language: attack/breach impossibility
+      claims are now qualified "*at the closure layer*," with
+      deployment-boundary attacks (§10.3) called out as a
+      separate surface; pure-mathematical impossibility claims
+      are left unqualified.
+      (c) Trust-independence is stated as a first-class
+      fault-isolation requirement (¶159a): a closed triad is
+      secure only insofar as its three positions are
+      independent compromise domains.
+      (d) Two scope/observability notes: §6 clarifies that
+      γ-orthogonality blocks *bootstrapping* a closure from
+      stolen artifacts but not a live hijacked session (caught
+      by continuous-presence verification), and §5 names the
+      Lyapunov residue audit as an attempted, evidence-tiered,
+      falsifiable bridge making the compositional core L
+      measurable.
+
+189e. These are clarifications of scope and claim-strength,
+      not new security claims. The v1.0/v1.1 architecture is
+      preserved verbatim; only the framing of what is and is
+      not being asserted has been sharpened.
 
 ========================================================================
 14.  CONCLUSION

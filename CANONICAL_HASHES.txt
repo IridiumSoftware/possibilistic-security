@@ -1,16 +1,46 @@
 CANONICAL HASHES
 Possibilistic Security Paper + Whitepaper + Triadic Closure License
-Aaron Green, April 2026 (Paper v1.1 + Whitepaper v1.1: May 2026)
+Aaron Green, April 2026 (Paper v1.2 + Whitepaper v1.2: June 2026)
 
 ================================================================
 
 Canonical URL:  https://github.com/IridiumSoftware/possibilistic-security
-Current:        TCL v1.3 (2026-04-14) + Paper v1.1 (2026-05-09)
-                + Whitepaper v1.1 (2026-05-08)
-Previous:       Paper v1.0 (2026-05-08); Whitepaper v1.0 (2026-04-05);
+Current:        TCL v1.3 (2026-04-14) + Paper v1.2 (2026-06-01)
+                + Whitepaper v1.2 (2026-06-01)
+Previous:       Paper v1.1 (2026-05-09), Paper v1.0 (2026-05-08);
+                Whitepaper v1.1 (2026-05-08), Whitepaper v1.0 (2026-04-05);
                 TCL v1.2 (2026-04-09), TCL v1.1 (2026-04-07),
                 TCL v1.0 (2026-04-05) — see git history
 Author:         Aaron Green
+
+Paper v1.2 + Whitepaper v1.2 changes (vs v1.1):
+- Edge-witness (triadic) review revisions, identical in substance across
+  both documents; the security architecture is unchanged:
+  (1) Gödel framing softened to a reflexivity-regress claim (Gödel cited
+      as analogy only; an overdetermination remark makes the conclusion
+      rest on closure-triadicity + minimum closure-arity, not the
+      metamathematics).
+  (2) Two-register language: attack/breach impossibility claims are
+      qualified "at the closure layer," with deployment-boundary attacks
+      called out as a separate surface; pure-mathematical impossibility
+      claims are left unqualified.
+  (3) Trust-independence stated as a first-class fault-isolation
+      requirement (whitepaper ¶159a): a closed triad is secure only
+      insofar as its three positions are independent compromise domains.
+  (4) Scope/observability notes: γ-orthogonality blocks bootstrapping a
+      closure from stolen artifacts but not a live hijacked session; the
+      Lyapunov residue audit is named as an attempted, evidence-tiered,
+      falsifiable bridge making the compositional core L measurable.
+- New "Updates in v1.2" subsection in each document (whitepaper §13.7,
+  paper "Updates in v1.2: edge-witness revisions").
+- Re-canonicalization note: the paper's von Neumann (1952) self-
+  reproducing-automata citation, added after v1.1, rebuilt paper.tex and
+  paper.pdf but was never re-hashed or re-signed; the prior CANONICAL_HASHES
+  still listed the pre-citation v1.1 paper.pdf hash
+  (a093807d…) and the paper signatures were stale. This v1.2 pass re-hashes
+  and re-signs all canonical artifacts, clearing that desync.
+- Body text and security argument structure otherwise unchanged.
+- TCL v1.3 license section preserved unchanged.
 
 Whitepaper v1.1 changes (vs v1.0):
 - References to the Closure framework updated to v1.4 (May 2026,
@@ -54,7 +84,26 @@ Paper v1.1 changes (vs v1.0):
 - TCL v1.3 license section preserved unchanged.
 
 ================================================================
-SHA-256 HASHES (current — TCL v1.3 + Paper v1.1 + Whitepaper v1.1)
+SHA-256 HASHES (current — TCL v1.3 + Paper v1.2 + Whitepaper v1.2)
+================================================================
+
+possibilistic_security_paper.tex
+6733c642240649e60f9f8a20cd7d5afcfc07e4244cb30a81a60a1d6f7e657415
+
+possibilistic_security_paper.pdf
+fdf5e035cfa98946f64ed6c7c5667ee207c4d7ab76fc504c6bdfd3b957aca974
+
+possibilistic_security_whitepaper.txt
+60a0533d6bd4bace2af1334bdb264ff6e250733d22b197f1e647d579eefe55d7
+
+possibilistic_security_whitepaper.pdf
+de94096c42ba0ad26fd7fe4dc5660481ad422e05cc4187b34998284d3b15e3e0
+
+TCL.txt
+9b3dc175f2168aa53d5051534385566d3b30aa2430a3020e3f8aebec6d0e819c
+
+================================================================
+SHA-256 HASHES (Paper v1.1 + Whitepaper v1.1 — superseded 2026-06-01)
 ================================================================
 
 possibilistic_security_paper.tex
@@ -68,9 +117,6 @@ possibilistic_security_whitepaper.txt
 
 possibilistic_security_whitepaper.pdf
 c37ecf839c0019474b4c0a0464994e2de31023f7345df2c6ac4f15aa03798986
-
-TCL.txt
-9b3dc175f2168aa53d5051534385566d3b30aa2430a3020e3f8aebec6d0e819c
 
 ================================================================
 SHA-256 HASHES (Whitepaper v1.0 + TCL v1.3 — superseded 2026-05-08)
@@ -119,7 +165,7 @@ To verify a copy you hold matches the canonical version:
     shasum -a 256 TCL.txt
 
 Compare the output against the current hashes above (TCL v1.3 +
-Paper v1.1 + Whitepaper v1.1). A non-matching hash means the copy
+Paper v1.2 + Whitepaper v1.2). A non-matching hash means the copy
 has been altered and is non-canonical.
 
 On macOS:  shasum -a 256 <filename>
